@@ -28,44 +28,50 @@ Conçue pour garantir une souveraineté numérique et une résilience totale en 
 
 ```mermaid
 graph TD
-    subgraph UI Layer [🎨 Interface Utilisateur Jetpack Compose]
-        Header[OrbisTopHeader : Titre + Recherche + Notifications + Avatar SIM]
-        Nav[Barre de Navigation : [Fil | Chats | Contacts | Réglages] || [SMS]]
-        Tab0[📰 Fil d'Actualité & Stories P2P Entre Amis]
-        Tab1[💬 Discussions Privées E2EE & Audio]
-        TabCall[📞 Écran d'Appel Vocal Chiffré E2EE & SAS]
-        Tab2[👥 Annuaire Unifié, Cercles & Groupes]
-        Tab3[⚙️ Paramètres, Multi-SIM & Centre d'Aide]
-        Tab4[✉️ SMS GSM Standard Téléphonie]
+    subgraph UI_Layer ["🎨 Interface Utilisateur Jetpack Compose"]
+        Header["OrbisTopHeader : Titre + Recherche + Notifications + Avatar SIM"]
+        Nav["Barre de Navigation : Fil / Chats / Contacts / Réglages / SMS"]
+        Tab0["📰 Fil d'Actualité & Stories Entre Amis"]
+        Tab1["💬 Discussions Privées E2EE & Audio"]
+        TabCall["📞 Écran d'Appel Vocal Chiffré E2EE & SAS"]
+        Tab2["👥 Annuaire Unifié, Cercles & Groupes"]
+        Tab3["⚙️ Paramètres, Multi-SIM & Centre d'Aide"]
+        Tab4["✉️ SMS GSM Standard Téléphonie"]
     end
 
-    subgraph Hub [⚡ OrbisBadgeHub & Gestion d'État]
-        BadgeHub[OrbisBadgeHub : Agrégateur Réactif des Flux]
-        BadgeHub -->|Mise à jour en direct| Launcher[LauncherBadgeManager : Badges Écran d'Accueil]
+    subgraph Hub ["⚡ OrbisBadgeHub & Gestion d'État"]
+        BadgeHub["OrbisBadgeHub : Agrégateur Réactif des Flux"]
+        Launcher["LauncherBadgeManager : Badges Écran d'Accueil"]
+        BadgeHub -->|Mise à jour en direct| Launcher
     end
 
-    subgraph Security [🔒 Couche Sécurité & Cryptographie]
-        Crypto[Moteur Cryptographique E2EE AES-256-GCM & RSA-2048]
-        DoubleRatchet[Double Ratchet KDF & Perfect Forward Secrecy]
-        SASVerifier[Générateur & Vérificateur de Code SAS]
-        KeyStore[Android KeyStore Matériel TEE]
+    subgraph Security ["🔒 Couche Sécurité & Cryptographie"]
+        Crypto["Moteur Cryptographique E2EE AES-256-GCM & RSA-2048"]
+        DoubleRatchet["Double Ratchet KDF & Perfect Forward Secrecy"]
+        SASVerifier["Générateur & Vérificateur de Code SAS"]
+        KeyStore["Android KeyStore Matériel TEE"]
     end
 
-    subgraph VoiceEngine [🎙️ Moteur d'Appels & Streaming Audio]
-        CallManager[CallManager & CallSignalingService]
-        AudioStream[AudioStreamEngine : Socket P2P + AES-256 Audio]
-        DeadPeerWatchdog[Watchdog Déconnexion 4.5s & Clôture UDP]
+    subgraph VoiceEngine ["🎙️ Moteur d'Appels & Streaming Audio"]
+        CallManager["CallManager & CallSignalingService"]
+        AudioStream["AudioStreamEngine : Socket P2P + AES-256 Audio"]
+        DeadPeerWatchdog["Watchdog Déconnexion 4.5s & Clôture UDP"]
     end
 
-    subgraph GSM Transport [📡 Moteur de Transport Cellulaire GSM]
-        SmsEngine[Moteur de Transport P2P & Fragmentation]
-        SmsReceiver[Réception & Distribution Interne]
-        Quota[Optimisation GSM & Gestion des Quotas]
-        PlainRepo[Accès SMS Téléphonie Standard]
+    subgraph GSM_Transport ["📡 Moteur de Transport Cellulaire GSM"]
+        SmsEngine["Moteur de Transport P2P & Fragmentation"]
+        SmsReceiver["Réception & Distribution Interne"]
+        Quota["Optimisation GSM & Gestion des Quotas"]
+        PlainRepo["Accès SMS Téléphonie Standard"]
     end
 
-    Tab0 & Tab1 & Tab2 & Tab3 & Tab4 --> BadgeHub
-    Tab1 & Tab0 --> Crypto
+    Tab0 --> BadgeHub
+    Tab1 --> BadgeHub
+    Tab2 --> BadgeHub
+    Tab3 --> BadgeHub
+    Tab4 --> BadgeHub
+    Tab1 --> Crypto
+    Tab0 --> Crypto
     TabCall --> CallManager
     CallManager --> SASVerifier
     CallManager --> AudioStream
