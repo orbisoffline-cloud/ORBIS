@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIS — Messagerie & Réseau Social P2P Souverain Hors-Ligne</title>
+  <meta name="description" content="Communiquez sans Internet, sans serveur et sans traces. ORBIS est la première plateforme sociale et de messagerie P2P souveraine au monde propulsée par le protocole GSM SMS chiffré.">
+  <meta name="keywords" content="Orbis, P2P, SMS, chiffrement, AES-256, Double Ratchet, hors-ligne, ShaDevPro, souveraineté, messagerie sécurisée">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#" class="brand-logo">
+        <div class="logo-shield">
+          <span class="logo-icon">🛡️</span>
+          <div class="orbit-ring"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">ORBIS</span>
+          <span class="brand-badge">SOVEREIGN P2P</span>
+        </div>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#features" class="nav-link" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="#security" class="nav-link" data-i18n="nav.security">Sécurité & PFS</a>
+        <a href="#help-center" class="nav-link" data-i18n="nav.help">Centre d'aide</a>
+        <a href="#quota" class="nav-link" data-i18n="nav.quota">Quota GSM</a>
+        <a href="#download" class="nav-link" data-i18n="nav.download">Télécharger</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="fr" title="Français">FR</button>
+          <button class="lang-btn" data-lang="en" title="English">EN</button>
+          <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-btn" title="Basculer le thème">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+        <!-- CTA Download Button -->
+        <a href="#download" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.get_app">
+          <span>Obtenir l'APK</span>
+          <span class="btn-arrow">↓</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section container">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="pulse-dot"></span>
+        <span data-i18n="hero.pill">Protocole Décentralisé GSM • 100% Hors-Ligne</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="hero.title_part1">Communiquez sans Internet.</span><br>
+        <span class="gradient-text" data-i18n="hero.title_part2">Sans Serveur. Sans Traces.</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        La première plateforme sociale et de messagerie souveraine au monde propulsée par le réseau SMS GSM avec chiffrement de niveau militaire AES-256-GCM, Double Ratchet (PFS) et stéganographie invisible.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#download" class="btn btn-primary btn-lg pulse-hover">
+          <span class="btn-icon">⚡</span>
+          <span data-i18n="hero.download_btn">Télécharger ORBIS v1.1.0</span>
+        </a>
+        <a href="#help-center" class="btn btn-secondary btn-lg">
+          <span class="btn-icon">📖</span>
+          <span data-i18n="hero.guide_btn">Explorer le Guide & FAQ</span>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <span class="badge-icon">🔐</span>
+          <div>
+            <strong data-i18n="badges.encryption_title">AES-256-GCM & PFS</strong>
+            <span data-i18n="badges.encryption_sub">Double Ratchet Militaire</span>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <span class="badge-icon">📶</span>
+          <div>
+            <strong data-i18n="badges.offline_title">Zéro Dépendance Cloud</strong>
+            <span data-i18n="badges.offline_sub">GSM SMS P2P Direct</span>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <span class="badge-icon">🛡️</span>
+          <div>
+            <strong data-i18n="badges.hardware_title">Android KeyStore</strong>
+            <span data-i18n="badges.hardware_sub">Protection Matérielle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Holographic Phone Mockup -->
+    <div class="hero-visual">
+      <div class="device-frame">
+        <div class="device-screen">
+          <!-- Mockup Status Bar -->
+          <div class="mockup-header">
+            <div class="mockup-avatar">
+              <span>👤</span>
+            </div>
+            <div class="mockup-title">
+              <strong>Sovereign Mesh Peer</strong>
+              <span class="mockup-status">● Chiffré E2EE • GSM</span>
+            </div>
+            <div class="mockup-lock">🔒</div>
+          </div>
+
+          <!-- Mockup Chat Stream -->
+          <div class="mockup-messages">
+            <div class="mockup-msg peer">
+              <p>🔐 Canaux Double Ratchet initialisés avec succès. Clé éphémère KDF synchronisée.</p>
+              <span class="mockup-time">12:40</span>
+            </div>
+
+            <div class="mockup-msg mine">
+              <p>Parfait ! Partage de position d'urgence chiffrée envoyé en 1 seul SMS.</p>
+              <div class="mockup-gps-card">
+                <span>🗺️ GPS: 33.5731° N, 7.5898° W</span>
+              </div>
+              <span class="mockup-time">12:41 ✓✓</span>
+            </div>
+
+            <!-- Voice Note Bubble Mockup -->
+            <div class="mockup-msg peer voice">
+              <div class="mockup-voice-bubble">
+                <button class="mockup-play-btn">▶</button>
+                <div class="mockup-waveform">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="mockup-speed">1.5x</span>
+              </div>
+              <span class="mockup-time">12:42</span>
+            </div>
+
+            <div class="mockup-msg mine">
+              <p>Stéganographie active : charge utile dissimulée sous texte porteur 🛡️</p>
+              <span class="mockup-time">12:42 ✓✓</span>
+            </div>
+          </div>
+
+          <!-- Mockup Bottom Bar -->
+          <div class="mockup-input-bar">
+            <span>Message chiffré SMS...</span>
+            <div class="mockup-send-icon">➤</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section id="features" class="section container">
+    <div class="section-header text-center">
+      <span class="section-tag" data-i18n="features.tag">PILIERS SOUVERAINS</span>
+      <h2 class="section-title" data-i18n="features.title">L'Autonomie Numérique Réinventée</h2>
+      <p class="section-desc" data-i18n="features.desc">Tout ce qu'un réseau social et une messagerie moderne offrent, sans aucun serveur tiers ni connexion Internet requise.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper cyan">
+          <span class="feature-icon">💬</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f1_title">Messagerie P2P & Double Ratchet</h3>
+        <p class="feature-text" data-i18n="features.f1_text">
+          Chaque message génère une nouvelle clé de dérivation via HMAC-SHA256 (PFS). Dès lecture, la clé est écrasée en mémoire vive (`fill(0)`).
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper blue">
+          <span class="feature-icon">🎙️</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f2_title">Notes Vocales & Waveform Interactive</h3>
+        <p class="feature-text" data-i18n="features.f2_text">
+          Compression ZLIB/Deflater ultra-dense, scrubbing dynamique au toucher et sélecteur de vitesse de lecture fluide (1.0x / 1.5x / 2.0x).
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper green">
+          <span class="feature-icon">🗺️</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f3_title">Géolocalisation & Widget SOS</h3>
+        <p class="feature-text" data-i18n="features.f3_text">
+          Émission d'alerte de détresse avec coordonnées GPS vers vos cercles de confiance en 1 seul clic depuis l'écran d'accueil Android.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper purple">
+          <span class="feature-icon">🌐</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f4_title">Mur Social & Stories 24h Entre Amis</h3>
+        <p class="feature-text" data-i18n="features.f4_text">
+          Partagez vos pensées, sondages décentralisés et stories éphémères exclusivement avec vos amis confirmés et cercles de confiance, sans fuite vers vos contacts ordinaires.
+        </p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper green">
+          <span class="feature-icon">📞</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f7_title">Appels Vocaux Chiffrés E2EE</h3>
+        <p class="feature-text" data-i18n="features.f7_text">
+          Signalisation GSM SMS hors-ligne, streaming audio direct AES-256-GCM, validation du code de sécurité SAS et bascule automatique vers appel GSM ordinaire en cas de solde SMS épuisé.
+        </p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper orange">
+          <span class="feature-icon">🕵️</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f5_title">Stéganographie SMS Invisible</h3>
+        <p class="feature-text" data-i18n="features.f5_text">
+          Dissimule les données chiffrées sous forme de caractères Unicode invisibles de largeur nulle au milieu de textes anodins (anti-censure).
+        </p>
+      </div>
+
+      <!-- Feature 7 -->
+      <div class="feature-card">
+        <div class="feature-icon-wrapper red">
+          <span class="feature-icon">📦</span>
+        </div>
+        <h3 class="feature-title" data-i18n="features.f6_title">Coffre Chiffré V3 & Migration P2P</h3>
+        <p class="feature-text" data-i18n="features.f6_text">
+          Sauvegarde intégrale dérivée par PBKDF2 (100 000 itérations), nettoyage intelligent du stockage et migration entre smartphones sans le cloud.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Cryptography Deep Dive -->
+  <section id="security" class="section bg-surface">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="security.tag">ARCHITECTURE FORTERESSE</span>
+        <h2 class="section-title" data-i18n="security.title">Sécurité Multi-Couches en Profondeur</h2>
+        <p class="section-desc" data-i18n="security.desc">Chaque couche d'ORBIS a été auditée et durcie pour résister à la rétro-ingénierie, aux écoutes réseau et aux extractions physiques.</p>
+      </div>
+
+      <div class="security-grid">
+        <div class="security-item">
+          <div class="security-num">01</div>
+          <div class="security-body">
+            <h4 data-i18n="security.s1_title">Chiffrement Asymétrique RSA-2048</h4>
+            <p data-i18n="security.s1_text">Paires de clés privées/publiques générées localement sur l'appareil. Signature cryptographique de chaque paquet pour garantir l'authenticité de l'expéditeur.</p>
+          </div>
+        </div>
+
+        <div class="security-item">
+          <div class="security-num">02</div>
+          <div class="security-body">
+            <h4 data-i18n="security.s2_title">Double Ratchet & Perfect Forward Secrecy</h4>
+            <p data-i18n="security.s2_text">Renouvellement automatique et irréversible des clés de session après chaque message. Même en cas de compromission physique, l'historique reste indéchiffrable.</p>
+          </div>
+        </div>
+
+        <div class="security-item">
+          <div class="security-num">03</div>
+          <div class="security-body">
+            <h4 data-i18n="security.s3_title">Stockage au Repos via Android KeyStore</h4>
+            <p data-i18n="security.s3_text">Les bases de données locales et fichiers sont scellés par une clé matérielle AES-GCM gérée dans la zone sécurisée TEE de votre processeur (anti-extraction ADB).</p>
+          </div>
+        </div>
+
+        <div class="security-item">
+          <div class="security-num">04</div>
+          <div class="security-body">
+            <h4 data-i18n="security.s4_title">Dérivation de Coffre PBKDF2 100k Itérations</h4>
+            <p data-i18n="security.s4_text">Vos archives `.orbis` résistent aux attaques par force brute grâce au hachage ralenti PBKDF2 combiné à un sel aléatoire cryptographique de 128 bits.</p>
+          </div>
+        </div>
+
+        <div class="security-item">
+          <div class="security-num">05</div>
+          <div class="security-body">
+            <h4 data-i18n="security.s5_title">Appels Vocaux Chiffrés & Code SAS</h4>
+            <p data-i18n="security.s5_text">Balisage sonore en streaming direct AES-256-GCM, authentification vocale par code court SAS anti-interception et coupure garantie sous 4.5s (Dead-Peer Watchdog).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Help Center & Knowledge Base (Integrated App Guide) -->
+  <section id="help-center" class="section container">
+    <div class="section-header text-center">
+      <span class="section-tag" data-i18n="help.tag">GUIDE COMPLET & CENTRE D'AIDE</span>
+      <h2 class="section-title" data-i18n="help.title">Comment Fonctionne ORBIS ?</h2>
+      <p class="section-desc" data-i18n="help.desc">Découvrez le guide officiel intégré dans l'application pour maîtriser l'ensemble des flux décentralisés.</p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="help-controls">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="helpSearch" placeholder="Rechercher un sujet (ex: hors-ligne, vocal, appel, clés, quota, sos)..." data-i18n-ph="help.search_placeholder">
+      </div>
+
+      <div class="category-pills" id="categoryPills">
+        <button class="pill active" data-cat="all" data-i18n="help.cat_all">Tous</button>
+        <button class="pill" data-cat="start" data-i18n="help.cat_start">🚀 Démarrage</button>
+        <button class="pill" data-cat="chat" data-i18n="help.cat_chat">💬 Messagerie</button>
+        <button class="pill" data-cat="calls" data-i18n="help.cat_calls">📞 Appels</button>
+        <button class="pill" data-cat="social" data-i18n="help.cat_social">👥 Réseau Social</button>
+        <button class="pill" data-cat="sec" data-i18n="help.cat_sec">🔐 Sécurité</button>
+        <button class="pill" data-cat="sys" data-i18n="help.cat_sys">⚙️ Système & GSM</button>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion Topics List -->
+    <div class="help-accordion" id="helpAccordion">
+      <!-- Topic 1 -->
+      <div class="accordion-item" data-category="start">
+        <button class="accordion-header">
+          <span class="acc-icon">📶</span>
+          <span class="acc-title" data-i18n="topics.t1_title">Comment ORBIS fonctionne-t-il à 100% hors-ligne ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t1_content">
+            ORBIS n'utilise aucun serveur cloud, API ou passerelle Web. Toutes les communications transitent directement via le réseau téléphonique cellulaire (GSM SMS). Vos messages et publications sont segmentés, compressés et chiffrés avant d'être envoyés directement de smartphone à smartphone.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 2 -->
+      <div class="accordion-item" data-category="start">
+        <button class="accordion-header">
+          <span class="acc-icon">🤝</span>
+          <span class="acc-title" data-i18n="topics.t2_title">Comment fonctionne l'appairage et l'échange de clés de sécurité ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t2_content">
+            Lors de la première prise de contact, les utilisateurs s'échangent leurs clés publiques de chiffrement soit par QR Code direct (instantané et hors-ondes), soit par SMS d'invitation sécurisé automatique. Une fois la clé validée, un canal chiffré de bout en bout inviolable est établi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 3 -->
+      <div class="accordion-item" data-category="chat">
+        <button class="accordion-header">
+          <span class="acc-icon">🎙️</span>
+          <span class="acc-title" data-i18n="topics.t3_title">Comment fonctionnent les notes vocales par SMS ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t3_content">
+            L'enregistreur audio capture votre voix avec un codec vocal ultra-optimisé (AMR/AAC) et applique une compression Deflater ZLIB. L'application découpe ensuite le fichier audio en fragments SMS compacts et le reconstitue instantanément chez le destinataire avec une barre de lecture interactive (1.0x / 1.5x / 2.0x).
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 4 (Calls E2EE) -->
+      <div class="accordion-item" data-category="calls">
+        <button class="accordion-header">
+          <span class="acc-icon">📞</span>
+          <span class="acc-title" data-i18n="topics.t_call_e2ee_title">Comment fonctionnent les appels vocaux chiffrés E2EE ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t_call_e2ee_content">
+            L'initiation de l'appel utilise une trame SMS de signalisation compacte (Offre <code>ORB:CO:</code>). À l'acceptation (<code>ORB:CA:</code>), un canal de streaming audio direct chiffré en AES-256-GCM est ouvert en peer-to-peer, sans aucun serveur intermédiaire et protégé contre toute interception réseau.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 5 (Call Zero Credit Fallback) -->
+      <div class="accordion-item" data-category="calls">
+        <button class="accordion-header">
+          <span class="acc-icon">📶</span>
+          <span class="acc-title" data-i18n="topics.t_call_credit_title">Que se passe-t-il si un utilisateur n'a pas de crédit SMS lors d'un appel ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t_call_credit_content">
+            Si l'appelant n'a pas de crédit SMS, ORBIS détecte immédiatement l'échec et propose de basculer vers un appel GSM standard. Si le destinataire n'a pas de SMS pour émettre la réponse chiffrée, il peut décrocher en mode GSM classique (100% gratuit pour lui en réception), tout en prévenant l'appelant.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 6 (Call SAS Security) -->
+      <div class="accordion-item" data-category="calls">
+        <button class="accordion-header">
+          <span class="acc-icon">🔒</span>
+          <span class="acc-title" data-i18n="topics.t_call_sas_title">Qu'est-ce que le code SAS pendant l'appel vocal ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t_call_sas_content">
+            Le code SAS (Short Authentication String) est dérivé des empreintes cryptographiques de la session et s'affiche sur les deux écrans. En lisant ce court code à voix haute, les deux correspondants vérifient mutuellement et mathématiquement l'absence totale d'espion intermédiaire (MITM) ou de fausses antennes relais.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 7 (Call Hangup & Watchdog) -->
+      <div class="accordion-item" data-category="calls">
+        <button class="accordion-header">
+          <span class="acc-icon">🛑</span>
+          <span class="acc-title" data-i18n="topics.t_call_hangup_title">Comment est garanti le raccrochage et la fin d'appel ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t_call_hangup_content">
+            Lors de la coupure, ORBIS envoie des paquets UDP de fermeture immédiate, un SMS d'arrêt (<code>ORB:CE:</code>) et active un chien de garde (Dead-Peer Watchdog). En cas de perte soudaine de couverture, la session est automatiquement fermée après 4.5 secondes de silence pour préserver la batterie et la confidentialité.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 8 (GPS) -->
+      <div class="accordion-item" data-category="chat">
+        <button class="accordion-header">
+          <span class="acc-icon">🗺️</span>
+          <span class="acc-title" data-i18n="topics.t4_title">Le partage GPS nécessite-t-il une connexion Data mobile ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t4_content">
+            Non ! La puce GPS satellite de votre smartphone fonctionne sans connexion Internet ni données mobiles. ORBIS lit vos coordonnées satellite exactes et les transmet dans un SMS chiffré de 1 seul segment, ouvrant directement la carte chez votre contact.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 9 (Social Friends-Only) -->
+      <div class="accordion-item" data-category="social">
+        <button class="accordion-header">
+          <span class="acc-icon">📰</span>
+          <span class="acc-title" data-i18n="topics.t5_title">Comment fonctionne le mur social et la diffusion exclusivement Entre Amis ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t5_content">
+            Le mur social et les stories 24h fonctionnent en réseau P2P décentralisé exclusivement entre amis confirmés et cercles de confiance. Vos publications et sondages ne sont transmis qu'à vos pairs autorisés via GSM P2P, garantissant zéro diffusion intempestive vers vos contacts téléphoniques ordinaires.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 10 (Steganography) -->
+      <div class="accordion-item" data-category="sec">
+        <button class="accordion-header">
+          <span class="acc-icon">🕵️</span>
+          <span class="acc-title" data-i18n="topics.t6_title">Comment la Stéganographie protège-t-elle contre la censure ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t6_content">
+            La stéganographie dissimule la charge utile binaire chiffrée sous forme de caractères Unicode invisibles (largeur zéro) insérés dans une phrase d'apparence totalement banale. Pour un opérateur ou un tiers espion, le SMS ressemble à une conversation ordinaire.
+          </p>
+        </div>
+      </div>
+
+      <!-- Topic 11 (Quota) -->
+      <div class="accordion-item" data-category="sys">
+        <button class="accordion-header">
+          <span class="acc-icon">📊</span>
+          <span class="acc-title" data-i18n="topics.t7_title">Quelle est la consommation réelle de mon forfait SMS ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t7_content">
+            Un message texte standard, un emoji de réaction, un partage GPS ou une mise à jour de statut ne consomment que <strong>1 seul SMS</strong>. Aucun SMS n'est émis en tâche de fond (0 keep-alive). Sur un forfait avec SMS illimités, l'impact est totalement nul et transparent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quota GSM Transparency Section -->
+  <section id="quota" class="section bg-surface">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="quota.tag">TRANSPARENCE GSM</span>
+        <h2 class="section-title" data-i18n="quota.title">Consommation & Sobriété du Quota SMS</h2>
+        <p class="section-desc" data-i18n="quota.desc">ORBIS compresse chaque paquet à l'octet près pour offrir un ratio coût/résilience optimal.</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="quota-table">
+          <thead>
+            <tr>
+              <th data-i18n="quota.th_action">Action Réalisée</th>
+              <th data-i18n="quota.th_cost">Coût SMS</th>
+              <th data-i18n="quota.th_details">Détails Techniques</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>💬 <strong>Message Texte 1 à 1</strong></td>
+              <td><span class="badge-success">1 SMS</span></td>
+              <td data-i18n="quota.row1_desc">Chiffré AES-256-GCM + signature + compression ZLIB</td>
+            </tr>
+            <tr>
+              <td>📞 <strong>Signalisation Appel Vocal E2EE</strong></td>
+              <td><span class="badge-info">2 SMS</span></td>
+              <td data-i18n="quota.row_call_desc">Échange des clés de session via SMS GSM • 0 SMS consommé pendant l'appel audio</td>
+            </tr>
+            <tr>
+              <td>🗺️ <strong>Partage GPS Satellite</strong></td>
+              <td><span class="badge-success">1 SMS</span></td>
+              <td data-i18n="quota.row2_desc">Coordonnées ultra-compactes ~40 octets</td>
+            </tr>
+            <tr>
+              <td>👍 <strong>Réaction Emoji / Accusé (ACK)</strong></td>
+              <td><span class="badge-success">1 SMS</span></td>
+              <td data-i18n="quota.row3_desc">Trame d'acquittement allégée et directe</td>
+            </tr>
+            <tr>
+              <td>👥 <strong>Message de Groupe (N membres)</strong></td>
+              <td><span class="badge-info">(N - 1) SMS</span></td>
+              <td data-i18n="quota.row4_desc">Envoi P2P souverain direct à chaque membre du groupe</td>
+            </tr>
+            <tr>
+              <td>🎙️ <strong>Note Vocale (3 à 5 secondes)</strong></td>
+              <td><span class="badge-warning">5 à 12 SMS</span></td>
+              <td data-i18n="quota.row5_desc">Flux audio binaire AMR/AAC compressé en multi-segments</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Release Section -->
+  <section id="download" class="section container">
+    <div class="download-card">
+      <div class="download-badge">RELEASE OFFICIELLE</div>
+      <h2 class="download-title" data-i18n="dl.title">Téléchargez ORBIS dès Aujourd'hui</h2>
+      <p class="download-desc" data-i18n="dl.desc">
+        Prenez le contrôle absolu de votre vie privée. Installez l'application souveraine sans passer par les magasins centralisés.
+      </p>
+
+      <div class="release-specs">
+        <div class="spec-item">
+          <span class="spec-label">Version</span>
+          <span class="spec-val">v1.1.0 (Stable)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Build</span>
+          <span class="spec-val">110</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Taille</span>
+          <span class="spec-val">~4.8 Mo</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Compatibilité</span>
+          <span class="spec-val">Android 7.0+ (API 24+)</span>
+        </div>
+      </div>
+
+      <div class="download-flex-layout">
+        <!-- Left: Download Actions & Checksum -->
+        <div class="download-left-col">
+          <div class="download-btn-wrapper">
+            <a href="https://github.com/ShaDevPro/Orbis/releases/latest/download/Orbis-release.apk" id="directDownloadBtn" class="btn btn-primary btn-xl pulse-hover" download>
+              <span class="btn-icon">📥</span>
+              <span data-i18n="dl.btn_apk">Télécharger l'APK Officiel</span>
+            </a>
+            <a href="https://github.com/ShaDevPro/Orbis" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-xl">
+              <span class="btn-icon">🐙</span>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+
+          <div class="checksum-box">
+            <span class="checksum-label">SHA-256 Checksum :</span>
+            <code class="checksum-code">a9f82d1c4b7e809312fe89da67bc12e0381467e912389abce910f54316d7a9b1</code>
+          </div>
+        </div>
+
+        <!-- Right: Interactive QR Code Card for Android Camera Scan -->
+        <div class="download-qr-card">
+          <div class="qr-frame-wrapper">
+            <img 
+              id="apkQrCodeImg" 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://github.com/ShaDevPro/Orbis/releases/latest/download/Orbis-release.apk&margin=8&color=06B6D4" 
+              alt="QR Code Téléchargement ORBIS" 
+              class="qr-code-img"
+              loading="lazy"
+            >
+            <div class="qr-scanner-laser"></div>
+          </div>
+          <div class="qr-info">
+            <span class="badge-success" data-i18n="dl.qr_badge">Scan Rapide</span>
+            <h4 data-i18n="dl.qr_title">Installation Directe Smartphone</h4>
+            <p data-i18n="dl.qr_desc">Scannez ce QR Code avec l'appareil photo de votre smartphone Android pour lancer le téléchargement immédiat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-icon">🛡️</span>
+          <span class="brand-title">ORBIS</span>
+        </div>
+        <p class="footer-tagline" data-i18n="footer.tagline">
+          Architecture de communication souveraine, P2P et hors-ligne propulsée par ShaDevPro.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="#security" data-i18n="nav.security">Sécurité</a>
+        <a href="#help-center" data-i18n="nav.help">Guide</a>
+        <a href="https://github.com/ShaDevPro/Orbis" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>© 2026 <strong>ORBIS Sovereign P2P</strong> • Conçu & Développé par <strong>ShaDevPro</strong>. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
