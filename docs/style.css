@@ -460,6 +460,17 @@ button, input {
   cursor: pointer;
   padding: 8px;
   transition: var(--transition);
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .mobile-toggle {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.mobile-toggle:hover {
+  border-color: var(--primary);
 }
 
 .mobile-toggle span {
@@ -469,6 +480,10 @@ button, input {
   background: var(--text-main);
   border-radius: 2px;
   transition: var(--transition);
+}
+
+[data-theme="light"] .mobile-toggle span {
+  background: #0f172a;
 }
 
 .mobile-toggle.active span:nth-child(1) {
