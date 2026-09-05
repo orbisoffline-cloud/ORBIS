@@ -41,6 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
       "badges.hardware_title": "Android KeyStore",
       "badges.hardware_sub": "Protection Matérielle",
 
+      "mockup.peer_name": "Sovereign Mesh Peer",
+      "mockup.status": "● Chiffré E2EE • GSM",
+      "mockup.msg1": "🔐 Canaux Double Ratchet initialisés avec succès. Clé éphémère KDF synchronisée.",
+      "mockup.msg2": "Parfait ! Partage de position d'urgence chiffrée envoyé en 1 seul SMS.",
+      "mockup.gps": "🗺️ GPS: 33.5731° N, 7.5898° W",
+      "mockup.msg3": "Stéganographie active : charge utile dissimulée sous texte porteur 🛡️",
+      "mockup.placeholder": "Message chiffré SMS...",
+
       "features.tag": "PILIERS SOUVERAINS",
       "features.title": "L'Autonomie Numérique Réinventée",
       "features.desc": "Tout ce qu'un réseau social et une messagerie moderne offrent, sans aucun serveur tiers ni connexion Internet requise.",
@@ -171,6 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
       "badges.hardware_title": "Android KeyStore",
       "badges.hardware_sub": "Hardware-Backed Security",
 
+      "mockup.peer_name": "Sovereign Mesh Peer",
+      "mockup.status": "● E2EE Encrypted • GSM",
+      "mockup.msg1": "🔐 Double Ratchet channels initialized successfully. Ephemeral KDF key synchronized.",
+      "mockup.msg2": "Great! Encrypted emergency location beacon dispatched in a single SMS.",
+      "mockup.gps": "🗺️ GPS: 33.5731° N, 7.5898° W",
+      "mockup.msg3": "Steganography active: payload concealed beneath carrier cover text 🛡️",
+      "mockup.placeholder": "Encrypted SMS message...",
+
       "features.tag": "SOVEREIGN PILLARS",
       "features.title": "Digital Autonomy Reinvented",
       "features.desc": "Everything a modern social network and messenger offers, with zero third-party servers and zero internet required.",
@@ -300,6 +316,14 @@ document.addEventListener('DOMContentLoaded', () => {
       "badges.offline_sub": "اتصال مباشر P2P عبر GSM",
       "badges.hardware_title": "حماية عتادية KeyStore",
       "badges.hardware_sub": "حماية مدمجة بالمعالج",
+
+      "mockup.peer_name": "نظير شبكة سيادية (Mesh)",
+      "mockup.status": "● مشفر طرفاً لطرف • GSM",
+      "mockup.msg1": "🔐 تم تهيئة قنوات Double Ratchet بنجاح. تمت مزامنة مفتاح KDF المؤقت.",
+      "mockup.msg2": "ممتاز! تم إرسال إحداثيات الطوارئ المشفرة في رسالة SMS واحدة.",
+      "mockup.gps": "🗺️ GPS: 33.5731° N, 7.5898° W",
+      "mockup.msg3": "إخفاء البيانات نشط: الحمولة المشفرة مخفية تحت نص حامل عادي 🛡️",
+      "mockup.placeholder": "رسالة SMS مشفرة...",
 
       "features.tag": "الأركان السيادية",
       "features.title": "إعادة ابتكار الاستقلالية الرقمية",
