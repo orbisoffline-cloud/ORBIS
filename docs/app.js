@@ -25,9 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.download_btn": "Télécharger ORBIS v1.1.0",
       "hero.guide_btn": "Explorer le Guide & FAQ",
       "hero.telegram_btn": "Canal Telegram Officiel",
-      "dl.btn_telegram": "Canal Telegram & MAJ",
+      "dl.btn_telegram": "Canal Telegram",
+      "dl.btn_github": "Code Source GitHub",
+      "dl.checksum_title": "Empreinte Cryptographique",
+      "dl.copy_btn": "Copier",
+      "dl.copied_btn": "✓ Copié !",
       "topics.t_telegram_title": "Comment recevoir les mises à jour et rejoindre la communauté ?",
-      "topics.t_telegram_content": "Rejoignez notre canal Telegram officiel (t.me/OrbisOfficial) pour télécharger les nouvelles versions APK signées en direct, recevoir les alertes de sécurité et participer aux discussions et retours d\'expérience.",
+      "topics.t_telegram_content": "Rejoignez notre canal Telegram officiel (t.me/OrbisOfficial) pour télécharger les nouvelles versions APK signées en direct, recevoir les alertes de sécurité et participer aux discussions et retours d'expérience.",
 
 
       "badges.encryption_title": "AES-256-GCM & PFS",
@@ -142,7 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.download_btn": "Download ORBIS v1.1.0",
       "hero.guide_btn": "Explore Guide & FAQ",
       "hero.telegram_btn": "Official Telegram Channel",
-      "dl.btn_telegram": "Telegram Channel & Updates",
+      "dl.btn_telegram": "Telegram Channel",
+      "dl.btn_github": "GitHub Source Code",
+      "dl.checksum_title": "Cryptographic Checksum",
+      "dl.copy_btn": "Copy",
+      "dl.copied_btn": "✓ Copied!",
       "topics.t_telegram_title": "How to get updates & join the community?",
       "topics.t_telegram_content": "Join our official Telegram channel (t.me/OrbisOfficial) to download new signed APK releases directly, receive security alerts, and participate in community discussions and feedback.",
 
@@ -258,7 +266,11 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.download_btn": "تحميل ORBIS v1.1.0",
       "hero.guide_btn": "دليل الاستخدام والأسئلة الشائعة",
       "hero.telegram_btn": "القناة الرسمية على تيليجرام",
-      "dl.btn_telegram": "قناة تيليجرام والتحديثات",
+      "dl.btn_telegram": "قناة تيليجرام",
+      "dl.btn_github": "المصدر على GitHub",
+      "dl.checksum_title": "البصمة الرقمية للتحقق",
+      "dl.copy_btn": "نسخ",
+      "dl.copied_btn": "✓ تم النسخ!",
       "topics.t_telegram_title": "كيفية الحصول على التحديثات والانضمام إلى المجتمع؟",
       "topics.t_telegram_content": "انضم إلى قناتنا الرسمية على تيليجرام (t.me/OrbisOfficial) لتحميل إصدارات APK الجديدة الموقعة مباشرة، وتلقي تنبيهات الأمان والمشاركة في نقاشات المجتمع.",
 
@@ -447,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.classList.toggle('active', isOpen);
   });
 
-  document.querySelectorAll('.nav-link').forEach(link => {
+  document.querySelectorAll('.nav-link, .nav-mobile-ctas a').forEach(link => {
     link.addEventListener('click', () => {
       navMenu?.classList.remove('open');
       mobileToggle?.classList.remove('active');
@@ -533,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrImg = document.getElementById('apkQrCodeImg');
     const directBtn = document.getElementById('directDownloadBtn');
     if (qrImg) {
-      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}&margin=8&color=0B192C&bgcolor=FFFFFF`;
+      qrImg.src = 'qr-code.svg';
     }
     if (directBtn) {
       directBtn.href = url;
@@ -546,6 +558,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const directDownloadBtn = document.getElementById('directDownloadBtn');
   directDownloadBtn?.addEventListener('click', () => {
     console.log('[Orbis] Download APK triggered:', ORBIS_CONFIG.apkDownloadUrl);
+  });
+
+  // Checksum Copy-to-Clipboard
+  const copyChecksumBtn = document.getElementById('copyChecksumBtn');
+  const checksumValue = document.getElementById('checksumValue')?.textContent.trim();
+  const copyChecksumText = document.getElementById('copyChecksumText');
+
+  copyChecksumBtn?.addEventListener('click', async () => {
+    if (!checksumValue) return;
+    try {
+      await navigator.clipboard.writeText(checksumValue);
+      const currentLang = document.documentElement.getAttribute('lang') || 'fr';
+      const copiedStr = translations[currentLang]?.['dl.copied_btn'] || '✓ Copié !';
+      if (copyChecksumText) copyChecksumText.textContent = copiedStr;
+      copyChecksumBtn.classList.add('copied');
+      setTimeout(() => {
+        const copyStr = translations[currentLang]?.['dl.copy_btn'] || 'Copier';
+        if (copyChecksumText) copyChecksumText.textContent = copyStr;
+        copyChecksumBtn.classList.remove('copied');
+      }, 2000);
+    } catch (e) {
+      console.warn('[Orbis] Clipboard write failed:', e);
+    }
   });
 
   // Open first accordion by default

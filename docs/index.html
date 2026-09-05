@@ -44,6 +44,17 @@
         <a href="#help-center" class="nav-link" data-i18n="nav.help">Centre d'aide</a>
         <a href="#quota" class="nav-link" data-i18n="nav.quota">Quota GSM</a>
         <a href="#download" class="nav-link" data-i18n="nav.download">Télécharger</a>
+        
+        <!-- Mobile Drawer Action Buttons -->
+        <div class="nav-mobile-ctas">
+          <a href="https://t.me/OrbisOfficial" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-sm">
+            <span>📢 Canal Telegram Officiel</span>
+          </a>
+          <a href="https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk" class="btn btn-primary btn-sm" download>
+            <span data-i18n="nav.get_app">Obtenir l'APK</span>
+            <span class="btn-arrow">↓</span>
+          </a>
+        </div>
       </div>
 
       <div class="nav-actions">
@@ -59,20 +70,21 @@
           <span class="theme-icon">🌙</span>
         </button>
 
-        <!-- Telegram Channel Link -->
+        <!-- Desktop Header CTAs -->
         <a href="https://t.me/OrbisOfficial" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-sm nav-telegram" title="Canal Telegram Officiel">
           <span>📢 Telegram</span>
         </a>
 
-        <!-- CTA Download Button -->
         <a href="https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk" class="btn btn-primary btn-sm nav-cta" download>
-          <span>Obtenir l'APK</span>
+          <span data-i18n="nav.get_app">Obtenir l'APK</span>
           <span class="btn-arrow">↓</span>
         </a>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-          <span></span><span></span><span></span>
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu de navigation" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </nav>
@@ -620,24 +632,55 @@
       <div class="download-flex-layout">
         <!-- Left: Download Actions & Checksum -->
         <div class="download-left-col">
-          <div class="download-btn-wrapper">
-            <a href="https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk" id="directDownloadBtn" class="btn btn-primary btn-xl pulse-hover" download>
-              <span class="btn-icon">📥</span>
-              <span data-i18n="dl.btn_apk">Télécharger l'APK Officiel</span>
+          <div class="download-actions-group">
+            <!-- Primary APK Button -->
+            <a href="https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk" id="directDownloadBtn" class="btn-download-primary pulse-hover" download>
+              <div class="btn-download-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <div class="btn-download-text">
+                <span class="btn-download-title" data-i18n="dl.btn_apk">Télécharger l'APK Officiel</span>
+                <span class="btn-download-meta">ORBIS v1.1.0 • 4.64 Mo • Android 8.0+</span>
+              </div>
             </a>
-            <a href="https://t.me/OrbisOfficial" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-xl">
-              <span class="btn-icon">📢</span>
-              <span data-i18n="dl.btn_telegram">Canal Telegram & MAJ</span>
-            </a>
-            <a href="https://github.com/orbisoffline-cloud/ORBIS" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-xl">
-              <span class="btn-icon">🐙</span>
-              <span>GitHub Repository</span>
-            </a>
+
+            <!-- Secondary Actions Row (Telegram + GitHub) -->
+            <div class="download-secondary-row">
+              <a href="https://t.me/OrbisOfficial" target="_blank" rel="noopener noreferrer" class="btn-sub btn-telegram-sub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                <span data-i18n="dl.btn_telegram">Canal Telegram</span>
+              </a>
+              <a href="https://github.com/orbisoffline-cloud/ORBIS" target="_blank" rel="noopener noreferrer" class="btn-sub btn-github-sub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span data-i18n="dl.btn_github">Code Source GitHub</span>
+              </a>
+            </div>
           </div>
 
-          <div class="checksum-box">
-            <span class="checksum-label">SHA-256 Checksum :</span>
-            <code class="checksum-code">6b983af8c9b139d39d220fb435f1c04c10e190a9817455c90d0886199bea96d9</code>
+          <!-- Modern Checksum Box with Copy Button -->
+          <div class="checksum-card">
+            <div class="checksum-header">
+              <div class="checksum-title-row">
+                <span class="checksum-badge">SHA-256</span>
+                <span class="checksum-label" data-i18n="dl.checksum_title">Empreinte Cryptographique</span>
+              </div>
+              <button type="button" id="copyChecksumBtn" class="btn-copy-checksum" title="Copier le hash SHA-256">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyChecksumText" data-i18n="dl.copy_btn">Copier</span>
+              </button>
+            </div>
+            <code class="checksum-hash" id="checksumValue">6b983af8c9b139d39d220fb435f1c04c10e190a9817455c90d0886199bea96d9</code>
           </div>
         </div>
 
@@ -646,10 +689,11 @@
           <div class="qr-frame-wrapper">
             <img 
               id="apkQrCodeImg" 
-              src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fgithub.com%2Forbisoffline-cloud%2FORBIS%2Freleases%2Fdownload%2FORBIS-v1.1.0%2FO.R.B.I.S.apk&margin=8&color=0B192C&bgcolor=FFFFFF" 
+              src="qr-code.svg" 
               alt="QR Code Téléchargement ORBIS" 
               class="qr-code-img"
-              loading="lazy"
+              width="200"
+              height="200"
             >
             <div class="qr-scanner-laser"></div>
           </div>
