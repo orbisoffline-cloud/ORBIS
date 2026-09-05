@@ -509,25 +509,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Direct Download & QR Code Dynamic Configuration
   // =========================================================================
   const ORBIS_CONFIG = {
-    apkDownloadUrl: "https://github.com/ShaDevPro/Orbis/releases/latest/download/Orbis-release.apk",
-    githubRepoUrl: "https://github.com/ShaDevPro/Orbis",
+    apkDownloadUrl: "https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk",
+    githubRepoUrl: "https://github.com/orbisoffline-cloud/ORBIS",
     version: "1.1.0",
     build: 110,
-    size: "~4.8 Mo"
+    size: "4.64 Mo"
   };
 
   function updateDownloadUrls(url) {
     const qrImg = document.getElementById('apkQrCodeImg');
     const directBtn = document.getElementById('directDownloadBtn');
     if (qrImg) {
-      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(url)}&margin=8&color=06B6D4`;
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}&margin=8&color=0B192C&bgcolor=FFFFFF`;
     }
     if (directBtn) {
       directBtn.href = url;
     }
   }
 
-  // Initialize with release URL (can be swapped instantly upon hosting)
+  // Initialize with official release URL
   updateDownloadUrls(ORBIS_CONFIG.apkDownloadUrl);
 
   const directDownloadBtn = document.getElementById('directDownloadBtn');
