@@ -253,6 +253,19 @@ button, input {
   box-shadow: 0 8px 28px rgba(6, 182, 212, 0.5);
 }
 
+.btn-telegram {
+  background: linear-gradient(135deg, #229ED9 0%, #0088cc 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(34, 158, 217, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-telegram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(34, 158, 217, 0.55);
+  color: #ffffff;
+}
+
 .btn-secondary {
   background: var(--bg-card);
   color: var(--text-main);

@@ -1,71 +1,72 @@
-# 🌐 ORBIS — Réseau Social & Messagerie Souveraine Hors-Ligne (P2P SMS & Voix E2EE)
+# 🌐 ORBIS — Sovereign Offline Social Network & Encrypted Messaging (P2P SMS & E2EE Voice)
 
 [![Release](https://img.shields.io/badge/Release-v1.1.0-blue.svg?style=flat&logo=github)](https://github.com/orbisoffline-cloud/ORBIS/releases/tag/ORBIS-v1.1.0)
 [![APK](https://img.shields.io/badge/Download-O.R.B.I.S.apk-success.svg?style=flat&logo=android)](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk)
-[![Android](https://img.shields.io/badge/Platform-Android_8.0+-3DDC84.svg?style=flat&logo=android)](https://android.com)
+[![Platform](https://img.shields.io/badge/Platform-Android_8.0+-3DDC84.svg?style=flat&logo=android)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-7F52FF.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
 [![UI](https://img.shields.io/badge/UI-Jetpack_Compose_Material3-4285F4.svg?style=flat&logo=jetpackcompose)](https://developer.android.com/jetpack/compose)
 [![Security](https://img.shields.io/badge/Cryptography-AES--256--GCM_&_Double_Ratchet-red.svg?style=flat&logo=lock)](https://en.wikipedia.org/wiki/End-to-end_encryption)
-[![Changelog](https://img.shields.io/badge/Changelog-v1.1.0-orange.svg?style=flat)](CHANGELOG.md)
+[![Telegram](https://img.shields.io/badge/Telegram-@OrbisOfficial-2CA5E0.svg?style=flat&logo=telegram)](https://t.me/OrbisOfficial)
 [![Website](https://img.shields.io/badge/Website-Online-cyan.svg?style=flat&logo=googlechrome)](https://orbisoffline-cloud.github.io/ORBIS/)
 
 ---
 
-## 📖 Introduction & Présentation
+## 📖 Executive Overview
 
-**ORBIS** est une plateforme souveraine de communication et de réseau social décentralisé fonctionnant **intégralement sans connexion Internet et sans serveur centralisé**, en s'appuyant sur le réseau cellulaire **GSM (SMS / Voix / Streaming P2P)**.
+**ORBIS** is the world's premier sovereign, decentralized social network and end-to-end encrypted messaging platform operating **100% offline with zero internet connectivity and zero cloud servers**, running entirely over the **cellular GSM network (SMS, Voice signaling, and P2P Streaming)**.
 
-Conçue pour garantir une souveraineté numérique et une résilience totale en toutes circonstances, l'application réunit dans un écosystème unifié :
-1. 🛡️ **Une Messagerie Privée Chiffrée de Bout en Bout** (Double Ratchet, HMAC-SHA256, AES-256-GCM, PFS).
-2. 📞 **Des Appels Vocaux Chiffrés E2EE Hors-Ligne** avec signalisation GSM SMS (`ORB:CO:`, `ORB:CA:`, `ORB:CE:`), streaming direct AES-256-GCM, validation du code SAS et bascule 100% gratuite vers le réseau GSM cellulaire en cas de solde SMS épuisé.
-3. 🎙️ **Des Notes Vocales Haute-Qualité par SMS** avec compression Deflater ZLIB et lecteur interactif de forme d'onde (*Waveform*).
-4. 📰 **Un Réseau Social P2P "Entre Amis Uniquement"** (Mur social, Stories éphémères 24h, Sondages décentralisés, Réactions et Commentaires) sans aucune fuite vers les contacts téléphoniques ordinaires.
-5. 📱 **Une Gestion Multi-SIM & Double Ligne Native** avec bascule instantanée sur l'avatar.
-6. 👥 **Un Annuaire Téléphonique Unifié & Groupes Sécurisés** avec certification mutuelle par QR Code en face à face.
-7. 📖 **Un Centre d'Aide & Guide Interactif Modulaire** intégré directement dans l'application avec recherche instantanée.
-8. ✉️ **Un Client SMS Cellulaire Classique** complet capable de remplacer l'application SMS par défaut du système Android.
+Engineered for absolute digital sovereignty, privacy, and censorship resistance during network blackouts or emergency situations, ORBIS consolidates an all-in-one ecosystem:
+
+1. 🛡️ **End-to-End Encrypted Private Messaging** (Signal-style Double Ratchet, HMAC-SHA256, AES-256-GCM, Perfect Forward Secrecy).
+2. 📞 **Offline E2EE Encrypted Voice Calls** with GSM SMS signaling (`ORB:CO:`, `ORB:CA:`, `ORB:CE:`), direct AES-256-GCM audio streaming, verbal SAS (Short Authentication String) security verification, and automatic zero-credit fallback to standard GSM telephony.
+3. 🎙️ **High-Density Voice Notes via SMS** powered by Deflater ZLIB compression, multi-part fragment assembly, and an interactive waveform audio player (1.0x / 1.5x / 2.0x playback).
+4. 📰 **Friends-Only Sovereign Social Network** (Social wall, 24h ephemeral stories, decentralized polls, emoji reactions, and encrypted comment threads) with strict zero-leakage isolation from ordinary phone contacts.
+5. 📱 **Native Dual SIM Multi-Carrier Hardware Management** with instant slot switching directly from the avatar profile.
+6. 👥 **Unified Phonebook, Circles & Cryptographic QR Pairing** with in-person hardware trust certification.
+7. 📖 **Integrated Interactive Help Center & User Guide** featuring offline search and multi-language support (English, French, Arabic).
+8. ✉️ **Full-Featured Android Default SMS Telephony Client** capable of seamlessly handling all standard carrier SMS traffic.
 
 ---
 
-## 🏗️ Architecture Globale de l'Application
+## 🏗️ System Architecture
 
 ```mermaid
 graph TD
-    subgraph UI_Layer ["🎨 Interface Utilisateur Jetpack Compose"]
-        Header["OrbisTopHeader : Titre + Recherche + Notifications + Avatar SIM"]
-        Nav["Barre de Navigation : Fil / Chats / Contacts / Réglages / SMS"]
-        Tab0["📰 Fil d'Actualité & Stories Entre Amis"]
-        Tab1["💬 Discussions Privées E2EE & Audio"]
-        TabCall["📞 Écran d'Appel Vocal Chiffré E2EE & SAS"]
-        Tab2["👥 Annuaire Unifié, Cercles & Groupes"]
-        Tab3["⚙️ Paramètres, Multi-SIM & Centre d'Aide"]
-        Tab4["✉️ SMS GSM Standard Téléphonie"]
+    subgraph UI_Layer ["🎨 Jetpack Compose UI Layer (Material 3)"]
+        Header["OrbisTopHeader: Title + Search + Notifications + SIM Switcher"]
+        Nav["Navigation Bar: Social Feed / Chats / Contacts / Settings / SMS"]
+        Tab0["📰 Friends-Only Social Feed & 24h Stories"]
+        Tab1["💬 E2EE Private Chats & Audio Voice Notes"]
+        TabCall["📞 Encrypted E2EE Voice Call & SAS Verification"]
+        Tab2["👥 Unified Directory, Circles & In-Person QR Scan"]
+        Tab3["⚙️ Settings, Dual-SIM Manager & Help Center"]
+        Tab4["✉️ Android Standard Telephony SMS Client"]
     end
 
-    subgraph Hub ["⚡ OrbisBadgeHub & Gestion d'État"]
-        BadgeHub["OrbisBadgeHub : Agrégateur Réactif des Flux"]
-        Launcher["LauncherBadgeManager : Badges Écran d'Accueil"]
-        BadgeHub -->|Mise à jour en direct| Launcher
+    subgraph Hub ["⚡ OrbisBadgeHub & Reactive State Manager"]
+        BadgeHub["OrbisBadgeHub: Reactive Stream Aggregator"]
+        Launcher["LauncherBadgeManager: Home Screen Badge Counter"]
+        BadgeHub -->|Real-time Updates| Launcher
     end
 
-    subgraph Security ["🔒 Couche Sécurité & Cryptographie"]
-        Crypto["Moteur Cryptographique E2EE AES-256-GCM & RSA-2048"]
-        DoubleRatchet["Double Ratchet KDF & Perfect Forward Secrecy"]
-        SASVerifier["Générateur & Vérificateur de Code SAS"]
-        KeyStore["Android KeyStore Matériel TEE"]
+    subgraph Security ["🔒 Security & Cryptographic Engine"]
+        Crypto["AES-256-GCM & RSA-2048 Cryptographic Engine"]
+        DoubleRatchet["Double Ratchet KDF & Perfect Forward Secrecy (PFS)"]
+        SASVerifier["SAS (Short Authentication String) Generator & Verifier"]
+        KeyStore["Android KeyStore Hardware TEE Security"]
     end
 
-    subgraph VoiceEngine ["🎙️ Moteur d'Appels & Streaming Audio"]
+    subgraph VoiceEngine ["🎙️ Voice Calling & Audio Streaming Engine"]
         CallManager["CallManager & CallSignalingService"]
-        AudioStream["AudioStreamEngine : Socket P2P + AES-256 Audio"]
-        DeadPeerWatchdog["Watchdog Déconnexion 4.5s & Clôture UDP"]
+        AudioStream["AudioStreamEngine: P2P Socket + AES-256 Voice Crypto"]
+        DeadPeerWatchdog["Dead-Peer Watchdog (4.5s Timeout) & UDP Teardown"]
     end
 
-    subgraph GSM_Transport ["📡 Moteur de Transport Cellulaire GSM"]
-        SmsEngine["Moteur de Transport P2P & Fragmentation"]
-        SmsReceiver["Réception & Distribution Interne"]
-        Quota["Optimisation GSM & Gestion des Quotas"]
-        PlainRepo["Accès SMS Téléphonie Standard"]
+    subgraph GSM_Transport ["📡 GSM Cellular Transport Engine"]
+        SmsEngine["P2P SMS Transport, Chunking & Fragmentation"]
+        SmsReceiver["Background Inbound SMS Router & Parser"]
+        Quota["GSM Quota Optimizer & Deduplication Engine"]
+        PlainRepo["Standard Android Telephony SMS Provider"]
     end
 
     Tab0 --> BadgeHub
@@ -89,130 +90,106 @@ graph TD
 
 ---
 
-## 🌟 Fonctionnalités Principales
+## 🌟 Core Features & Capabilities
 
-### 1. 📞 Appels Vocaux Chiffrés E2EE & Signalisation GSM
-- **Signalisation Hors-Ligne par SMS** :
-  - Offre d'appel compacte (`ORB:CO:<port>:<ip>:<key>`).
-  - Acceptation instantanée (`ORB:CA:<port>:<ip>:<key>`).
-  - Clôture sécurisée (`ORB:CE:`).
-- **Streaming Audio Direct AES-256-GCM** : Flux voix bidirectionnel chiffré en temps réel de pair à pair sans aucun serveur relais.
-- **Code de Sécurité SAS (Short Authentication String)** : Empreinte courte affichée simultanément sur les deux téléphones pour validation orale contre toute attaque de l'homme du milieu (MITM) ou fausses antennes relais (IMSI-Catchers).
-- **Bascule Intelligente & Détection de Crédit SMS (0 SMS)** : Si l'un des correspondants ne dispose pas de crédit SMS pour renvoyer la clé chiffrée, proposition automatique de basculer vers un appel GSM cellulaire standard (100% gratuit pour le destinataire en réception).
-- **Raccrochage Garanti & Dead-Peer Watchdog** : Rafale de paquets UDP d'extinction immédiate, SMS de fin d'appel et arrêt automatique après 4.5 secondes de silence réseau pour préserver la batterie et l'intégrité de la session.
+### 1. 📞 Encrypted E2EE Voice Calling over GSM
+- **Offline GSM SMS Signaling Protocol**:
+  - Compact call offer packet (`ORB:CO:<port>:<ip>:<key>`).
+  - Instant call acceptance handshake (`ORB:CA:<port>:<ip>:<key>`).
+  - Secure call termination teardown (`ORB:CE:`).
+- **Direct AES-256-GCM Audio Streaming**: Real-time bidirectional encrypted voice stream over peer-to-peer sockets with zero intermediary relay servers.
+- **Short Authentication String (SAS) Verification**: Derived cryptographic session visual checksum displayed on both screens for verbal peer validation, immunizing calls against Man-in-the-Middle (MITM) attacks and rogue cellular base stations (IMSI-Catchers).
+- **Zero-Credit Intelligent GSM Fallback**: If either participant runs out of SMS balance, ORBIS detects delivery state and prompts instant fallback to standard GSM cellular voice (100% free for receiver).
+- **Guaranteed Call Teardown & Dead-Peer Watchdog**: Burst UDP termination packets, SMS teardown, and automated 4.5-second silence shutdown to protect device battery and session confidentiality.
 
-### 2. 💬 Messagerie Privée (Chiffrement E2EE & Double Ratchet)
-- **Sécurité de Bout en Bout** : Textes, fichiers et coordonnées chiffrés directement sur l'appareil émetteur via AES-256-GCM et signatures RSA-2048.
-- **Perfect Forward Secrecy (PFS)** : Clés éphémères renouvelées à chaque message et effacées de la mémoire vive (`fill(0)`).
-- **Accusés de Réception en Direct** : Suivi des étapes (*Envoi*, *Remis*, *Lu*).
-- **Messages Éphémères** : Minuteurs de disparition automatique programmables (10s, 1m, 1h, 24h, 7j).
-- **Partage GPS Satellite Hors-Ligne** : Transmission des coordonnées géographiques brutes sans connexion 4G/5G en un seul SMS.
+### 2. 💬 Private Messaging (Double Ratchet & PFS)
+- **End-to-End Cryptography**: All texts, media, and location shares are encrypted on-device via AES-256-GCM and signed with local RSA-2048 keys.
+- **Perfect Forward Secrecy (PFS)**: Ephemeral session keys are recalculated for each message and immediately wiped from RAM (`fill(0)`).
+- **Live Delivery Acknowledgments**: Multi-state message tracking (*Sent*, *Delivered*, *Read*).
+- **Self-Destructing Timers**: Programmable auto-erase timers (10s, 1m, 1h, 24h, 7d).
+- **Offline Satellite GPS Sharing**: Direct satellite GPS coordinate extraction transmitted in a single compact encrypted SMS opening native maps.
 
-### 3. 🎙️ Notes Vocales Haute-Compression
-- **Format Vocal Optimisé** : Enregistrement micro compressé (AMR/AAC) avec Deflater ZLIB.
-- **Lecteur Audio Interactif** : Forme d'onde animée (*Waveform*), scrubbing dynamique au toucher, sélecteur de vitesse (1.0x / 1.5x / 2.0x) et décompte précis.
+### 3. 🎙️ Ultra-Compressed Voice Notes
+- **High-Efficiency Voice Codec**: Highly optimized AMR/AAC audio recording paired with ZLIB Deflater compression.
+- **Interactive Waveform Player**: Dynamic touch-seeking waveform visualizer, playback speed toggle (1.0x / 1.5x / 2.0x), and sub-second progress counters.
 
-### 4. 📰 Réseau Social P2P "Entre Amis Uniquement"
-- **Diffusion Souveraine Exclusive** : Les publications, sondages et stories sont diffusés uniquement aux amis confirmés et cercles de confiance via GSM P2P, sans aucune fuite vers les contacts téléphoniques ordinaires.
-- **Stories & Statuts 24h** : Galerie horizontale des statuts éphémères avec anneaux lumineux et expiration après 24 heures.
-- **Sondages Décentralisés** : Création d'enquêtes interactives avec dépouillement en temps réel et prévention du double-vote.
-- **Interactions Complètes** : Réactions emoji (❤️, 🔥, 👏, 💡, 🛡️) et fils de commentaires chiffrés.
+### 4. 📰 Friends-Only Sovereign Social Network
+- **Strict Friends-Only Isolation**: Posts, polls, and stories are transmitted exclusively to confirmed friends and trusted circles via GSM P2P with zero leakage to regular phonebook contacts.
+- **24-Hour Ephemeral Stories**: Horizontal gallery with glowing rings, seen-state indicators, and automated 24-hour expiration.
+- **Decentralized Polls**: Interactive voting with real-time tally aggregation and cryptographic anti-double-vote protection.
+- **Rich Interactions**: Emoji reactions (❤️, 🔥, 👏, 💡, 🛡️) and encrypted comment threads.
 
-### 5. 👥 Annuaire Téléphonique Unifié, Cercles & Groupes
-- **Carnet d'Adresses Intégré** : Synchronisation locale directe avec recherche rapide.
-- **Cercles Souverains** : Segmentation des contacts (*Famille*, *Amis*, *Travail*, *Communauté*).
-- **Groupes Chiffrés** : Clé AES-256 de groupe partagée et multi-diffusion cellulaire automatique.
-- **Échange & Certification QR Code** : Échange de clés publiques en face à face sans ondes GSM.
+### 5. 📱 Multi-SIM & Hardware Dual-Line Manager
+- **Dynamic SIM Slot Selection**: Seamlessly route SMS and calls through SIM 1 or SIM 2.
+- **Isolated Account Profiles**: Independent cryptographic keypairs, avatars, and contact lists per SIM card.
 
-### 6. 📱 Gestion Multi-SIM & Double Ligne
-- **Pastille d'État SIM sur Avatar** : Indicateur compact `SIM 1` / `SIM 2` intégré sur la photo de profil.
-- **Bascule en 1 Clic** : Bascule instantanée de la ligne d'émission et profils cryptographiques indépendants.
-
-### 7. 📖 Centre d'Aide & Guide Interactif
-- **Guide Modulaire Intégré** : FAQ complète par catégories (*Démarrage*, *Messagerie*, *Appels*, *Réseau Social*, *Sécurité*, *Multi-SIM*).
-- **Recherche Instantanée** : Filtrage en temps réel des réponses et astuces d'utilisation.
-
-### 8. 📊 Suivi & Transparence du Quota GSM
-- **Compteur de Consommation Réel** : Suivi des messages cellulaires émis aujourd'hui et sur le mois.
-- **Sobriété Maximale** : 1 SMS par message texte/GPS/réaction, 2 SMS pour l'initialisation d'un appel vocal, 0 SMS pendant la conversation audio.
+### 6. 🛡️ Invisible SMS Steganography
+- **Zero-Width Unicode Concealment**: Binary encrypted payloads are concealed as invisible Unicode zero-width characters inside innocent, everyday plain text messages to bypass deep packet inspection and keyword filters.
 
 ---
 
-## 📂 Organisation du Projet (`app/src/main/java/com/sha/orbis/`)
+## 🔒 Security & Cryptographic Architecture
 
-```
-com.sha.orbis/
-├── admin/                      # Console d'administration & diagnostics système
-├── backup/                     # Gestion du coffre-fort chiffré (.orbis) et restauration PBKDF2
-├── call/                       # Moteur d'appels vocaux E2EE, signalisation SMS, audio stream & SAS
-├── data/                       # Repositories centraux, sessions & Hub de badges réactifs
-├── media/                      # Capture audio, compression AMR/AAC & localisation GPS
-├── model/                      # Modèles de données (Messages, Discussions, Contacts, Social, Calls)
-├── permissions/                # Gestion des permissions Android (Micro, SMS, Téléphonie)
-├── security/                   # Cryptographie AES-256-GCM, RSA-2048, KeyStore TEE & Double Ratchet
-├── sms/                        # Moteur cellulaire GSM, fragmentation P2P & accusés
-├── social/                     # Fil d'actualité P2P, stories 24h, sondages & cercles
-│   └── algorithm/              # Algorithme de recommandation et tri local décentralisé
-├── storage/                    # Persistance locale Room/SQLite chiffrée
-└── ui/                         # Interface Utilisateur Jetpack Compose
-    ├── app/                    # Navigation principale & barre d'onglets 2 blocs
-    ├── auth/                   # Authentification, déverrouillage PIN & biométrie
-    ├── call/                   # Écran d'appel vocal chiffré, clavier, statut SAS & bascule GSM
-    ├── chat/                   # Sélection de contact & nouvelles discussions
-    ├── components/             # Composants réutilisables (Header, Badges, Waveform, Avatars)
-    ├── contacts/               # Annuaire téléphonique unifié, QR Code & fiches
-    ├── conversation/           # Écran de discussion chiffrée, lecteur audio & éphémère
-    ├── feedback/               # Rapports de diagnostic chiffrés pour le développeur
-    ├── groups/                 # Création et gestion des groupes chiffrés
-    ├── help/                   # Centre d'aide, FAQ modulaire & guides
-    ├── notifications/          # Centre de notifications unifié
-    ├── plainsms/               # Client SMS standard opérateur
-    ├── profile/                # Gestion du profil, enrichissement & mur social
-    ├── settings/               # Paramètres, gestion Multi-SIM, quotas & coffre
-    └── social/                 # Mur d'actualité, stories 24h & sondages
-```
+| Layer | Algorithm / Protocol | Implementation Details |
+|---|---|---|
+| **Identity & Signing** | **RSA-2048** | Hardware-backed keypair generated on-device, SHA-512 signatures |
+| **Session Encryption** | **AES-256-GCM** | Authenticated encryption with 128-bit integrity tag |
+| **Key Ratchet** | **Double Ratchet (KDF)** | HMAC-SHA256 derivation tree for Perfect Forward Secrecy |
+| **Voice Audio Stream** | **AES-256-GCM + SAS** | Direct P2P streaming, verbal Short Authentication String |
+| **Data At-Rest** | **Android KeyStore (TEE)** | Master key stored in hardware enclave; anti-ADB extraction |
+| **Vault Backups** | **PBKDF2 (100k rounds)** | AES-256-CBC with 128-bit cryptographically secure salt |
+| **Steganography** | **Zero-Width Unicode** | Anti-censorship payload concealment inside harmless text |
 
 ---
 
-## 🌍 Internationalisation (i18n)
+## 📊 GSM SMS Quota Efficiency & Transparency
 
-| Langue | Support | Disposition |
-| :--- | :--- | :--- |
-| 🇫🇷 **Français** | Intégral (App + Site Web + Guide) | LTR |
-| 🇬🇧 **Anglais** | Intégral (App + Site Web + Guide) | LTR |
-| 🇸🇦 **Arabe** | Intégral (App + Site Web + Guide) | RTL natif |
+ORBIS is engineered with extreme byte-level frugality to maximize battery life and minimize carrier SMS usage:
 
----
-
-## 🛠️ Stack Technique
-
-- **Langage** : Kotlin 2.0+ (Coroutines, Flow & StateFlow)
-- **Interface Utilisateur** : Jetpack Compose & Material 3
-- **Architecture** : Architecture Propre & Flux de Données Unidirectionnel (MVI / MVVM)
-- **Cryptographie** : BouncyCastle, Java Cryptography Architecture (JCA), Android KeyStore (TEE)
-- **Audio & Streaming** : Android AudioRecord / AudioTrack, sockets UDP pair-à-pair, AMR-WB / AAC
-- **Compatibilité** : Android 8.0 (API 26) jusqu'à Android 15 (API 35)
+| User Action | GSM SMS Cost | Technical Details |
+|---|---|---|
+| 💬 **1-on-1 Text Message** | **1 SMS** | Compressed ZLIB + AES-256-GCM + Signature |
+| 📞 **E2EE Voice Call Signaling** | **2 SMS** | Session key exchange via SMS • 0 SMS consumed during audio stream |
+| 🗺️ **Satellite GPS Location** | **1 SMS** | Ultra-compact binary coordinates (~40 bytes) |
+| 👍 **Emoji Reaction / Delivery ACK** | **1 SMS** | Lightweight single-frame acknowledgment packet |
+| 👥 **Group Broadcast (N members)** | **(N - 1) SMS** | Direct sovereign P2P dispatch to each circle member |
+| 🎙️ **Voice Note (3 to 5 seconds)** | **5 to 12 SMS** | Ultra-compressed AMR/AAC binary payload chunking |
 
 ---
 
-## 🚀 Compilation & Installation
+## 🔗 Official Links & Community
 
+- 🌐 **Official Website & Downloads**: [https://orbisoffline-cloud.github.io/ORBIS/](https://orbisoffline-cloud.github.io/ORBIS/)
+- 📢 **Official Telegram Channel**: [https://t.me/OrbisOfficial](https://t.me/OrbisOfficial)
+- 🐙 **GitHub Repository**: [https://github.com/orbisoffline-cloud/ORBIS](https://github.com/orbisoffline-cloud/ORBIS)
+- 📦 **Direct APK Download**: [O.R.B.I.S. v1.1.0 APK](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk)
+
+---
+
+## 🛠️ Build & Installation
+
+### Prerequisites
+- **Android Studio**: Ladybug / Jellyfish or newer
+- **Android SDK**: API 26 (Android 8.0 Oreo) up to API 35 (Android 15)
+- **Kotlin**: 2.0+
+- **JDK**: Java 17+
+
+### Compilation
 ```bash
-# Générer l'APK de Débogage
+# Clone the repository
+git clone https://github.com/orbisoffline-cloud/ORBIS.git
+cd ORBIS
+
+# Build Debug APK
 ./gradlew assembleDebug
 
-# Générer l'APK de Production / Release
+# Build Release APK
 ./gradlew assembleRelease
-
-# Lancer la suite de tests unitaires
-./gradlew test
 ```
-
-L'exécutable généré se trouve dans :  
-`app/build/outputs/apk/release/app-release.apk`
 
 ---
 
-## 📜 Licence
-Projet développé sous licence souveraine dédiée à la confidentialité absolue, à la résilience hors-ligne et à la liberté de communication.
+## 📄 License & Credits
 
+Designed & Developed with sovereign precision by **ShaDevPro**.  
+© 2026 **ORBIS Sovereign P2P**. All rights reserved.

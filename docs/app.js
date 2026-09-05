@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.subtitle": "La première plateforme sociale et de messagerie souveraine au monde propulsée par le réseau SMS GSM avec chiffrement de niveau militaire AES-256-GCM, Double Ratchet (PFS) et stéganographie invisible.",
       "hero.download_btn": "Télécharger ORBIS v1.1.0",
       "hero.guide_btn": "Explorer le Guide & FAQ",
+      "hero.telegram_btn": "Canal Telegram Officiel",
+      "dl.btn_telegram": "Canal Telegram & MAJ",
+      "topics.t_telegram_title": "Comment recevoir les mises à jour et rejoindre la communauté ?",
+      "topics.t_telegram_content": "Rejoignez notre canal Telegram officiel (t.me/OrbisOfficial) pour télécharger les nouvelles versions APK signées en direct, recevoir les alertes de sécurité et participer aux discussions et retours d\'expérience.",
+
 
       "badges.encryption_title": "AES-256-GCM & PFS",
       "badges.encryption_sub": "Double Ratchet Militaire",
@@ -136,6 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.subtitle": "The world's first sovereign P2P social and encrypted messaging platform powered by GSM SMS network with military-grade AES-256-GCM, Double Ratchet (PFS), and invisible steganography.",
       "hero.download_btn": "Download ORBIS v1.1.0",
       "hero.guide_btn": "Explore Guide & FAQ",
+      "hero.telegram_btn": "Official Telegram Channel",
+      "dl.btn_telegram": "Telegram Channel & Updates",
+      "topics.t_telegram_title": "How to get updates & join the community?",
+      "topics.t_telegram_content": "Join our official Telegram channel (t.me/OrbisOfficial) to download new signed APK releases directly, receive security alerts, and participate in community discussions and feedback.",
 
       "badges.encryption_title": "AES-256-GCM & PFS",
       "badges.encryption_sub": "Military Double Ratchet",
@@ -248,6 +257,10 @@ document.addEventListener('DOMContentLoaded', () => {
       "hero.subtitle": "أول منصة تواصل اجتماعي ومراسلة سيادية من نظير إلى نظير (P2P) في العالم تعمل عبر شبكة الرسائل القصيرة SMS مع تشفير عسكري AES-256-GCM وبروتوكول Double Ratchet وإخفاء البيانات غير المرئي.",
       "hero.download_btn": "تحميل ORBIS v1.1.0",
       "hero.guide_btn": "دليل الاستخدام والأسئلة الشائعة",
+      "hero.telegram_btn": "القناة الرسمية على تيليجرام",
+      "dl.btn_telegram": "قناة تيليجرام والتحديثات",
+      "topics.t_telegram_title": "كيفية الحصول على التحديثات والانضمام إلى المجتمع؟",
+      "topics.t_telegram_content": "انضم إلى قناتنا الرسمية على تيليجرام (t.me/OrbisOfficial) لتحميل إصدارات APK الجديدة الموقعة مباشرة، وتلقي تنبيهات الأمان والمشاركة في نقاشات المجتمع.",
 
       "badges.encryption_title": "تشفير عسكري AES-256",
       "badges.encryption_sub": "بروتوكول Double Ratchet PFS",
