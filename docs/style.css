@@ -635,18 +635,6 @@ button, input {
   z-index: 1;
 }
 
-.hero-badges-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.hero-badges-wrapper .hero-pill {
-  margin-bottom: 0;
-}
-
 .hero-pill {
   display: inline-flex;
   align-items: center;
@@ -658,31 +646,10 @@ button, input {
   border-radius: 20px;
   font-size: 0.82rem;
   font-weight: 700;
+  margin-bottom: 20px;
   max-width: 100%;
   animation: heroFadeDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   will-change: transform, opacity;
-}
-
-.hero-platform-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #ef4444;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  animation: heroFadeDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
-  will-change: transform, opacity;
-}
-
-[data-theme="dark"] .hero-platform-pill {
-  background: rgba(239, 68, 68, 0.18);
-  border-color: rgba(239, 68, 68, 0.45);
-  color: #fca5a5;
 }
 
 .pulse-dot {
@@ -718,29 +685,9 @@ button, input {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 38px;
   animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
   will-change: transform, opacity;
-}
-
-.hero-platform-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 34px;
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px dashed var(--border-color);
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
-  max-width: 620px;
-  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-}
-
-[data-theme="dark"] .hero-platform-note {
-  background: rgba(0, 0, 0, 0.25);
 }
 
 .trust-badges {
@@ -1420,15 +1367,6 @@ button, input {
   text-align: center;
 }
 
-.spec-item-highlight .spec-val {
-  color: #10b981;
-  font-weight: 800;
-}
-
-[data-theme="dark"] .spec-item-highlight .spec-val {
-  color: #34d399;
-}
-
 .spec-label {
   font-size: 0.68rem;
   color: var(--text-dim);
@@ -1441,63 +1379,6 @@ button, input {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-main);
-}
-
-/* Prominent iOS Incompatibility Banner */
-.platform-alert-banner {
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-inline-start: 4px solid #ef4444;
-  border-radius: var(--radius-md);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-align: left;
-  margin: 18px 0 24px;
-  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.06);
-}
-
-[dir="rtl"] .platform-alert-banner {
-  text-align: right;
-}
-
-[data-theme="dark"] .platform-alert-banner {
-  background: rgba(239, 68, 68, 0.14);
-  border-color: rgba(239, 68, 68, 0.38);
-}
-
-.platform-alert-icon {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #ef4444;
-  font-size: 1.15rem;
-  flex-shrink: 0;
-}
-
-.platform-alert-icon svg {
-  color: #ef4444;
-}
-
-.platform-alert-content strong {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: #ef4444;
-  margin-bottom: 3px;
-  letter-spacing: 0.2px;
-}
-
-[data-theme="dark"] .platform-alert-content strong {
-  color: #f87171;
-}
-
-.platform-alert-content p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.45;
-  margin: 0;
 }
 
 .download-flex-layout {
@@ -2337,35 +2218,6 @@ button, input {
     padding-top: 8px !important;
   }
 
-  /* Platform pills and alert banner on small screens */
-  .hero-badges-wrapper {
-    gap: 8px;
-  }
-
-  .hero-platform-pill {
-    font-size: 0.72rem;
-    padding: 5px 10px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-platform-note {
-    font-size: 0.78rem;
-    padding: 8px 10px;
-  }
-
-  .platform-alert-banner {
-    padding: 10px 12px;
-    gap: 10px;
-  }
-
-  .platform-alert-content strong {
-    font-size: 0.84rem;
-  }
-
-  .platform-alert-content p {
-    font-size: 0.76rem;
-  }
 }
 
 /* ==========================================================================
