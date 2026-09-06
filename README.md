@@ -28,6 +28,22 @@ Engineered for absolute digital sovereignty, privacy, and censorship resistance 
 
 ---
 
+## 📱 Screenshots & User Interface
+
+<div align="center">
+
+| 📰 Sovereign Social Feed | 📊 Decentralized Polls & Stories | 💬 E2EE Chat & Voice Notes |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/01_social_feed.jpg" width="230" alt="Social Feed" /> | <img src="docs/screenshots/02_decentralized_polls.jpg" width="230" alt="Decentralized Polls & Stories" /> | <img src="docs/screenshots/03_e2ee_chat_voice_note.jpg" width="230" alt="E2EE Chat & Voice Note" /> |
+
+| 🔒 Encrypted Conversations | ✉️ Android SMS & Dual-SIM | ⚙️ Security & Cryptography |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/04_chats_list.jpg" width="230" alt="Encrypted Discussions" /> | <img src="docs/screenshots/05_sms_inbox_dual_sim.jpg" width="230" alt="Dual-SIM SMS Inbox" /> | <img src="docs/screenshots/06_settings_security.jpg" width="230" alt="Security & Cryptography" /> |
+
+</div>
+
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
