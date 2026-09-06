@@ -1623,14 +1623,14 @@ button, input {
 .download-qr-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
-  padding: 16px;
+  padding: 18px 16px;
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 10px;
+  gap: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: var(--transition);
 }
@@ -1638,21 +1638,22 @@ button, input {
 .download-qr-card:hover {
   border-color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--primary-glow);
+  box-shadow: 0 8px 28px var(--primary-glow);
 }
 
 .qr-frame-wrapper {
   position: relative;
   background: #ffffff;
-  padding: 8px;
-  border-radius: 12px;
-  border: 1.5px solid rgba(6, 182, 212, 0.35);
+  padding: 10px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(6, 182, 212, 0.4);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  width: 140px;
-  height: 140px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08), 0 0 16px rgba(6, 182, 212, 0.15);
+  width: 154px;
+  height: 154px;
+  overflow: hidden;
 }
 
 .qr-code-img {
@@ -1662,23 +1663,107 @@ button, input {
   aspect-ratio: 1/1;
   display: block;
   object-fit: contain;
+  position: relative;
+  z-index: 1;
 }
 
+/* Futuristic QR Scanner Cyber Laser */
 .qr-scanner-laser {
   position: absolute;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  box-shadow: 0 0 8px var(--primary);
-  border-radius: 2px;
-  animation: scanLaser 2.8s ease-in-out infinite alternate;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #00e5ff 15%, #38bdf8 50%, #00e5ff 85%, transparent 100%);
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px rgba(6, 182, 212, 0.95), 0 0 35px rgba(56, 189, 248, 0.7);
+  border-radius: 3px;
+  z-index: 10;
+  pointer-events: none;
+  animation: scanLaser 2.4s ease-in-out infinite alternate !important;
+}
+
+/* Glowing Scanning Light Curtain */
+.qr-scanner-laser::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to top, rgba(6, 182, 212, 0.35) 0%, rgba(59, 130, 246, 0.12) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.qr-scanner-laser::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: linear-gradient(to bottom, rgba(6, 182, 212, 0.28) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 @keyframes scanLaser {
-  0% { top: 8px; opacity: 0.9; }
-  100% { top: calc(100% - 10px); opacity: 0.9; }
+  0% {
+    top: 6px;
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 9px);
+    opacity: 0.9;
+  }
+}
+
+/* Cyber Scanner Corners */
+.qr-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #06b6d4;
+  border-style: solid;
+  border-width: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.qr-corner-tl {
+  top: 4px;
+  left: 4px;
+  border-top-width: 2.5px;
+  border-left-width: 2.5px;
+  border-top-left-radius: 4px;
+}
+
+.qr-corner-tr {
+  top: 4px;
+  right: 4px;
+  border-top-width: 2.5px;
+  border-right-width: 2.5px;
+  border-top-right-radius: 4px;
+}
+
+.qr-corner-bl {
+  bottom: 4px;
+  left: 4px;
+  border-bottom-width: 2.5px;
+  border-left-width: 2.5px;
+  border-bottom-left-radius: 4px;
+}
+
+.qr-corner-br {
+  bottom: 4px;
+  right: 4px;
+  border-bottom-width: 2.5px;
+  border-right-width: 2.5px;
+  border-bottom-right-radius: 4px;
 }
 
 .qr-info h4 {
@@ -2254,19 +2339,14 @@ button, input {
   border-color: rgba(6, 182, 212, 0.35);
 }
 
-/* Reduced Motion Accessibility */
+/* Reduced Motion Accessibility (Safely scoped to scroll & reveals) */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  html {
     scroll-behavior: auto !important;
   }
   .reveal, .reveal-scale {
     opacity: 1 !important;
     transform: none !important;
-  }
-  .orbit-ring, .device-frame, .glow-1, .glow-2, .glow-3, .qr-scanner-laser {
-    animation: none !important;
+    transition: none !important;
   }
 }
