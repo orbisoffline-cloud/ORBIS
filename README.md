@@ -183,26 +183,28 @@ ORBIS is engineered with extreme byte-level frugality to maximize battery life a
 
 ---
 
-## 🛠️ Build & Installation
+## 📥 Download & Installation
 
-### Prerequisites
-- **Android Studio**: Ladybug / Jellyfish or newer
-- **Android SDK**: API 26 (Android 8.0 Oreo) up to API 35 (Android 15)
-- **Kotlin**: 2.0+
-- **JDK**: Java 17+
+### 📋 Prerequisites
+- **Device**: Android smartphone running **Android 8.0 (API 26)** or higher.
+- **Cellular Network**: Active SIM card with standard GSM SMS & Voice capability.
+- **Internet**: **0% required** — 100% offline sovereign architecture.
 
-### Compilation
-```bash
-# Clone the repository
-git clone https://github.com/orbisoffline-cloud/ORBIS.git
-cd ORBIS
-
-# Build Debug APK
-./gradlew assembleDebug
-
-# Build Release APK
-./gradlew assembleRelease
-```
+### 🚀 Setup Guide
+1. **Download Official Signed APK**:
+   - Download `O.R.B.I.S.apk` from the [Official Website](https://orbisoffline-cloud.github.io/ORBIS/) or [GitHub Releases](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk).
+2. **Verify SHA-256 Checksum (Optional)**:
+   ```bash
+   # Windows (PowerShell / CMD)
+   certutil -hashfile O.R.B.I.S.apk SHA256
+   # Value: 6b983af8c9b139d39d220fb435f1c04c10e190a9817455c90d0886199bea96d9
+   ```
+3. **Install & Grant Required Permissions**:
+   - Open the `.apk` file and authorize installation (*Allow from unknown sources*).
+   - Set ORBIS as your **Default SMS App** (required by Android to encrypt, decrypt, and route cellular frames).
+   - Grant SMS, Phone, Audio and Contacts permissions when prompted.
+4. **Immediate Off-Grid Communication**:
+   - Scan your contact's cryptographic QR code in person or exchange public keys over SMS to start communicating securely.
 
 ---
 
