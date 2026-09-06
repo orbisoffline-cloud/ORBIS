@@ -39,7 +39,7 @@ Engineered for absolute digital sovereignty, privacy, and censorship resistance 
 
 | 🔒 Encrypted Conversations | ✉️ Android SMS & Dual-SIM | ⚙️ Security & Cryptography |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/04_chats_list.jpg" width="230" alt="Encrypted Discussions" /> | <img src="docs/screenshots/05_sms_inbox_dual_sim.jpg" width="230" alt="Dual-SIM SMS Inbox" /> | 
+| <img src="docs/screenshots/04_chats_list.jpg" width="230" alt="Encrypted Discussions" /> | <img src="docs/screenshots/05_sms_inbox_dual_sim.jpg" width="230" alt="Dual-SIM SMS Inbox" /> | <img src="docs/screenshots/06_settings_security.jpg" width="230" alt="Dual-SIM SMS Inbox" /> | 
 
 </div>
 
