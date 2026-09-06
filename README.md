@@ -1,6 +1,7 @@
 # 🌐 ORBIS — Sovereign Offline Social Network & Encrypted Messaging (P2P SMS & E2EE Voice)
 
 [![Release](https://img.shields.io/badge/Release-v1.1.0-blue.svg?style=flat&logo=github)](https://github.com/orbisoffline-cloud/ORBIS/releases/tag/ORBIS-v1.1.0)
+[![Downloads](https://img.shields.io/github/downloads/orbisoffline-cloud/ORBIS/total.svg?style=flat&color=brightgreen&logo=github)](https://github.com/orbisoffline-cloud/ORBIS/releases)
 [![APK](https://img.shields.io/badge/Download-O.R.B.I.S.apk-success.svg?style=flat&logo=android)](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android_8.0+-3DDC84.svg?style=flat&logo=android)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-7F52FF.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
