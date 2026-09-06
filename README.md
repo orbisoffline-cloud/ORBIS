@@ -7,7 +7,7 @@
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-7F52FF.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
 [![UI](https://img.shields.io/badge/UI-Jetpack_Compose_Material3-4285F4.svg?style=flat&logo=jetpackcompose)](https://developer.android.com/jetpack/compose)
 [![Security](https://img.shields.io/badge/Cryptography-AES--256--GCM_&_Double_Ratchet-red.svg?style=flat&logo=lock)](https://en.wikipedia.org/wiki/End-to-end_encryption)
-[![Telegram](https://img.shields.io/badge/Telegram-@OrbisOfficial-2CA5E0.svg?style=flat&logo=telegram)](https://t.me/OrbisOfficial)
+[![Telegram](https://img.shields.io/badge/Telegram-@orbis__community-2CA5E0.svg?style=flat&logo=telegram)](https://t.me/orbis_community)
 [![Website](https://img.shields.io/badge/Website-Online-cyan.svg?style=flat&logo=googlechrome)](https://orbisoffline-cloud.github.io/ORBIS/)
 
 ---
@@ -177,7 +177,7 @@ ORBIS is engineered with extreme byte-level frugality to maximize battery life a
 ## 🔗 Official Links & Community
 
 - 🌐 **Official Website & Downloads**: [https://orbisoffline-cloud.github.io/ORBIS/](https://orbisoffline-cloud.github.io/ORBIS/)
-- 📢 **Official Telegram Channel**: [https://t.me/OrbisOfficial](https://t.me/OrbisOfficial)
+- 💬 **Official Telegram Community**: [https://t.me/orbis_community](https://t.me/orbis_community)
 - 🐙 **GitHub Repository**: [https://github.com/orbisoffline-cloud/ORBIS](https://github.com/orbisoffline-cloud/ORBIS)
 - 📦 **Direct APK Download**: [O.R.B.I.S. v1.1.0 APK](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk)
 

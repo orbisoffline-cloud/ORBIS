@@ -673,7 +673,7 @@ fun ProfileScreen(
                                 .background(Color(0xFF0284C7).copy(alpha = 0.12f))
                                 .clickable {
                                     try {
-                                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/OrbisOfficial"))
+                                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/orbis_community"))
                                         context.startActivity(intent)
                                     } catch (_: Exception) {}
                                 }
@@ -689,7 +689,7 @@ fun ProfileScreen(
                                 Icon(Icons.Default.Send, contentDescription = null, tint = Color(0xFF38BDF8), modifier = Modifier.size(20.dp))
                                 Column {
                                     Text(stringResource(R.string.help_telegram_channel_title), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
-                                    Text("t.me/OrbisOfficial • " + stringResource(R.string.help_telegram_channel_sub), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                    Text("t.me/orbis_community • " + stringResource(R.string.help_telegram_channel_sub), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 }
                             }
                             Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = null, tint = Color(0xFF38BDF8), modifier = Modifier.size(16.dp))

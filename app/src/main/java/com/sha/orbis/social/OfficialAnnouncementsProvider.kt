@@ -40,8 +40,8 @@ object OfficialAnnouncementsProvider {
                     🌐 Official Website & Documentation:
                     https://orbisoffline-cloud.github.io/ORBIS/
 
-                    📢 Official Telegram Channel & Direct Updates:
-                    https://t.me/OrbisOfficial
+                    📢 Official Telegram Community & Direct Updates:
+                    https://t.me/orbis_community
 
                     🚀 Join our Telegram channel for direct signed APK releases, security advisories, and community discussions!
                 """.trimIndent(),
