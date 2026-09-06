@@ -643,4 +643,64 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionItems[0].classList.add('active');
     if (firstBody) firstBody.style.maxHeight = firstBody.scrollHeight + 'px';
   }
+
+  // =========================================================================
+  // 7. Premium Lightweight Scroll Animations & Reading Progress
+  // =========================================================================
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
+  // Throttled scroll listener using requestAnimationFrame for optimal 60fps/120fps performance
+  let isScrolling = false;
+  window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+
+        if (scrollProgressBar) {
+          scrollProgressBar.style.width = scrollPercent + '%';
+        }
+
+        if (backToTopBtn) {
+          if (scrollTop > 380) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        }
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }, { passive: true });
+
+  backToTopBtn?.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // IntersectionObserver for ultra-fluid, zero-overhead Scroll Reveals
+  const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.12
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
 });

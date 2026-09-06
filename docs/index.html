@@ -37,6 +37,9 @@
 </head>
 <body>
 
+  <!-- Top Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
   <!-- Background Ambient Glows -->
   <div class="glow glow-1"></div>
   <div class="glow glow-2"></div>
@@ -223,15 +226,15 @@
 
   <!-- Core Features Section -->
   <section id="features" class="section container">
-    <div class="section-header text-center">
+    <div class="section-header text-center reveal">
       <span class="section-tag" data-i18n="features.tag">PILIERS SOUVERAINS</span>
       <h2 class="section-title" data-i18n="features.title">L'Autonomie Numérique Réinventée</h2>
       <p class="section-desc" data-i18n="features.desc">Tout ce qu'un réseau social et une messagerie moderne offrent, sans aucun serveur tiers ni connexion Internet requise.</p>
     </div>
 
-    <div class="grid grid-3">
+    <div class="grid grid-3 stagger-items">
       <!-- Feature 1 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper cyan">
           <span class="feature-icon">💬</span>
         </div>
@@ -242,7 +245,7 @@
       </div>
 
       <!-- Feature 2 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper blue">
           <span class="feature-icon">🎙️</span>
         </div>
@@ -253,7 +256,7 @@
       </div>
 
       <!-- Feature 3 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper green">
           <span class="feature-icon">🗺️</span>
         </div>
@@ -264,7 +267,7 @@
       </div>
 
       <!-- Feature 4 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper purple">
           <span class="feature-icon">🌐</span>
         </div>
@@ -275,7 +278,7 @@
       </div>
 
       <!-- Feature 5 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper green">
           <span class="feature-icon">📞</span>
         </div>
@@ -286,7 +289,7 @@
       </div>
 
       <!-- Feature 6 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper orange">
           <span class="feature-icon">🕵️</span>
         </div>
@@ -297,7 +300,7 @@
       </div>
 
       <!-- Feature 7 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper red">
           <span class="feature-icon">📦</span>
         </div>
@@ -308,7 +311,7 @@
       </div>
 
       <!-- Feature 8 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper cyan">
           <span class="feature-icon">⚡</span>
         </div>
@@ -319,7 +322,7 @@
       </div>
 
       <!-- Feature 9 -->
-      <div class="feature-card">
+      <div class="feature-card reveal">
         <div class="feature-icon-wrapper blue">
           <span class="feature-icon">📶</span>
         </div>
@@ -334,14 +337,14 @@
   <!-- Security & Cryptography Deep Dive -->
   <section id="security" class="section bg-surface">
     <div class="container">
-      <div class="section-header text-center">
+      <div class="section-header text-center reveal">
         <span class="section-tag" data-i18n="security.tag">ARCHITECTURE FORTERESSE</span>
         <h2 class="section-title" data-i18n="security.title">Sécurité Multi-Couches en Profondeur</h2>
         <p class="section-desc" data-i18n="security.desc">Chaque couche d'O R B I S a été auditée et durcie pour résister à la rétro-ingénierie, aux écoutes réseau et aux extractions physiques.</p>
       </div>
 
-      <div class="security-grid">
-        <div class="security-item">
+      <div class="security-grid stagger-items">
+        <div class="security-item reveal">
           <div class="security-num">01</div>
           <div class="security-body">
             <h4 data-i18n="security.s1_title">Chiffrement Asymétrique RSA-2048</h4>
@@ -349,7 +352,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">02</div>
           <div class="security-body">
             <h4 data-i18n="security.s2_title">Double Ratchet & Perfect Forward Secrecy</h4>
@@ -357,7 +360,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">03</div>
           <div class="security-body">
             <h4 data-i18n="security.s3_title">Stockage au Repos via Android KeyStore</h4>
@@ -365,7 +368,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">04</div>
           <div class="security-body">
             <h4 data-i18n="security.s4_title">Dérivation de Coffre PBKDF2 100k Itérations</h4>
@@ -373,7 +376,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">05</div>
           <div class="security-body">
             <h4 data-i18n="security.s5_title">Appels Vocaux Chiffrés & Code SAS</h4>
@@ -381,7 +384,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">06</div>
           <div class="security-body">
             <h4 data-i18n="security.s6_title">Signature Numérique & Anti-Altération</h4>
@@ -389,7 +392,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">07</div>
           <div class="security-body">
             <h4 data-i18n="security.s7_title">Écrasement RAM & Zéro-Trace Volatile</h4>
@@ -397,7 +400,7 @@
           </div>
         </div>
 
-        <div class="security-item">
+        <div class="security-item reveal">
           <div class="security-num">08</div>
           <div class="security-body">
             <h4 data-i18n="security.s8_title">Watchdog Temps Réel & Rupture d'Écoute</h4>
@@ -410,14 +413,14 @@
 
   <!-- Help Center & Knowledge Base (Integrated App Guide) -->
   <section id="help-center" class="section container">
-    <div class="section-header text-center">
+    <div class="section-header text-center reveal">
       <span class="section-tag" data-i18n="help.tag">GUIDE COMPLET & CENTRE D'AIDE</span>
       <h2 class="section-title" data-i18n="help.title">Comment Fonctionne O R B I S ?</h2>
       <p class="section-desc" data-i18n="help.desc">Découvrez le guide officiel intégré dans l'application pour maîtriser l'ensemble des flux décentralisés.</p>
     </div>
 
     <!-- Search & Filter Controls -->
-    <div class="help-controls">
+    <div class="help-controls reveal">
       <div class="search-box">
         <span class="search-icon">🔍</span>
         <input type="text" id="helpSearch" placeholder="Rechercher un sujet (ex: hors-ligne, vocal, appel, clés, quota, sos)..." data-i18n-ph="help.search_placeholder">
@@ -435,7 +438,7 @@
     </div>
 
     <!-- FAQ Accordion Topics List -->
-    <div class="help-accordion" id="helpAccordion">
+    <div class="help-accordion stagger-items" id="helpAccordion">
       <!-- Telegram & Community Topic -->
       <div class="accordion-item" data-category="start">
         <button class="accordion-header">
@@ -609,13 +612,13 @@
   <!-- Quota GSM Transparency Section -->
   <section id="quota" class="section bg-surface">
     <div class="container">
-      <div class="section-header text-center">
+      <div class="section-header text-center reveal">
         <span class="section-tag" data-i18n="quota.tag">TRANSPARENCE GSM</span>
         <h2 class="section-title" data-i18n="quota.title">Consommation & Sobriété du Quota SMS</h2>
         <p class="section-desc" data-i18n="quota.desc">O R B I S compresse chaque paquet à l'octet près pour offrir un ratio coût/résilience optimal.</p>
       </div>
 
-      <div class="table-responsive">
+      <div class="table-responsive reveal-scale">
         <table class="quota-table">
           <thead>
             <tr>
@@ -663,7 +666,7 @@
 
   <!-- Download & Release Section -->
   <section id="download" class="section container">
-    <div class="download-card">
+    <div class="download-card reveal-scale">
       <div class="download-badge">RELEASE OFFICIELLE</div>
       <h2 class="download-title" data-i18n="dl.title">Téléchargez O R B I S dès Aujourd'hui</h2>
       <p class="download-desc" data-i18n="dl.desc">
@@ -765,7 +768,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
+    <div class="container footer-content reveal">
       <div class="footer-brand">
         <div class="brand-logo">
           <div class="logo-shield">
@@ -794,6 +797,13 @@
       <p>© 2026 <strong>O R B I S Sovereign P2P</strong> • Conçu & Développé par <strong>ShaDevPro</strong>. Tous droits réservés.</p>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="btn-back-to-top" aria-label="Retour en haut" title="Haut de page">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
 
   <script src="app.js"></script>
 </body>
