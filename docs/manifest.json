@@ -1,6 +1,6 @@
 {
-  "name": "ORBIS Sovereign P2P",
-  "short_name": "ORBIS",
+  "name": "O R B I S Sovereign P2P",
+  "short_name": "O R B I S",
   "description": "Messagerie & Réseau Social P2P Souverain Hors-Ligne",
   "start_url": "./index.html",
   "display": "standalone",
