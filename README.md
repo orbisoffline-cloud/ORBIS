@@ -3,7 +3,8 @@
 [![Release](https://img.shields.io/badge/Release-v1.1.0-blue.svg?style=flat&logo=github)](https://github.com/orbisoffline-cloud/ORBIS/releases/tag/ORBIS-v1.1.0)
 [![Downloads](https://img.shields.io/github/downloads/orbisoffline-cloud/ORBIS/total.svg?style=flat&color=brightgreen&logo=github)](https://github.com/orbisoffline-cloud/ORBIS/releases)
 [![APK](https://img.shields.io/badge/Download-O.R.B.I.S.apk-success.svg?style=flat&logo=android)](https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk)
-[![Platform](https://img.shields.io/badge/Platform-Android_8.0+-3DDC84.svg?style=flat&logo=android)](https://android.com)
+[![Platform](https://img.shields.io/badge/Platform-100%25_Android_Exclusive-3DDC84.svg?style=flat&logo=android)](https://android.com)
+[![iOS](https://img.shields.io/badge/Apple_iOS-NOT_SUPPORTED-critical.svg?style=flat&logo=apple)](#-prerequisites--platform-compatibility)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin_2.0-7F52FF.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
 [![UI](https://img.shields.io/badge/UI-Jetpack_Compose_Material3-4285F4.svg?style=flat&logo=jetpackcompose)](https://developer.android.com/jetpack/compose)
 [![Security](https://img.shields.io/badge/Cryptography-AES--256--GCM_&_Double_Ratchet-red.svg?style=flat&logo=lock)](https://en.wikipedia.org/wiki/End-to-end_encryption)
@@ -11,6 +12,12 @@
 [![Website](https://img.shields.io/badge/Website-Online-cyan.svg?style=flat&logo=googlechrome)](https://orbisoffline-cloud.github.io/ORBIS/)
 
 ---
+
+> [!IMPORTANT]
+> ### 🤖 100% Android Exclusive Architecture — Strictly Incompatible with Apple iOS (iPhone)
+> **ORBIS is exclusively engineered for Android smartphones.**  
+> It is **fundamentally incompatible with Apple iOS (iPhone)** because Apple's closed sandbox policy strictly prohibits third-party applications from acting as the default telephony SMS handler, intercepting raw GSM SMS packets in the background, or directly accessing cellular modem hardware.  
+> **If you use an iPhone, ORBIS cannot run on your device.**
 
 ## 📖 Executive Overview
 
@@ -185,10 +192,11 @@ ORBIS is engineered with extreme byte-level frugality to maximize battery life a
 
 ## 📥 Download & Installation
 
-### 📋 Prerequisites
-- **Device**: Android smartphone running **Android 8.0 (API 26)** or higher.
-- **Cellular Network**: Active SIM card with standard GSM SMS & Voice capability.
-- **Internet**: **0% required** — 100% offline sovereign architecture.
+### 📋 Prerequisites & Platform Compatibility
+- **Operating System**: 🤖 **100% Android Exclusive** (Android 8.0 Oreo / API 26 up to Android 15 / API 35).
+- **Apple iOS / iPhone**: 🚫 **STRICTLY NOT SUPPORTED** — Incompatible by technical design. Apple's iOS sandbox blocks raw background GSM SMS packet interception, telephony client overrides, and direct cellular modem manipulation.
+- **Cellular Hardware**: Active SIM card with standard GSM SMS & Voice capability (Dual-SIM multi-carrier supported).
+- **Internet / Data**: **0% required** — 100% offline sovereign peer-to-peer architecture.
 
 ### 🚀 Setup Guide
 1. **Download Official Signed APK**:

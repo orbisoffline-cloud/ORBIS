@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "nav.get_app": "Obtenir l'APK",
 
       "hero.pill": "Protocole Décentralisé GSM • 100% Hors-Ligne",
+      "hero.platform_pill": "Exclusivité Android • Incompatible iPhone / iOS",
+      "hero.platform_note": "Application souveraine exclusivement réservée aux smartphones Android. Incompatible avec Apple iOS (iPhone).",
       "hero.title_part1": "Communiquez sans Internet.",
       "hero.title_part2": "Sans Serveur. Sans Traces.",
       "hero.subtitle": "La première plateforme sociale et de messagerie souveraine au monde propulsée par le réseau SMS GSM avec chiffrement de niveau militaire AES-256-GCM, Double Ratchet (PFS) et stéganographie invisible.",
@@ -125,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "topics.t6_content": "La stéganographie dissimule la charge utile binaire chiffrée sous forme de caractères Unicode invisibles (largeur zéro) insérés dans une phrase d'apparence totalement banale. Pour un opérateur ou un tiers espion, le SMS ressemble à une conversation ordinaire.",
       "topics.t7_title": "Quelle est la consommation réelle de mon forfait SMS ?",
       "topics.t7_content": "Un message texte standard, un emoji de réaction, un partage GPS ou une mise à jour de statut ne consomment que 1 seul SMS. Aucun SMS n'est émis en tâche de fond (0 keep-alive). Sur un forfait avec SMS illimités, l'impact est totalement nul et transparent.",
+      "topics.t8_title": "L'application O R B I S est-elle disponible sur iPhone (Apple iOS) ?",
+      "topics.t8_content": "Non, O R B I S est une exclusivité stricte Android et ne sera jamais disponible sur iPhone. Le système d'exploitation fermé d'Apple (sandbox iOS) interdit formellement à toute application tierce de remplacer le client SMS de téléphonie par défaut, d'intercepter les trames GSM en arrière-plan ou d'accéder directement au modem cellulaire. Seul l'écosystème ouvert d'Android permet d'offrir une véritable souveraineté de communication 100% décentralisée et hors-ligne.",
 
       "quota.tag": "TRANSPARENCE GSM",
       "quota.title": "Consommation & Sobriété du Quota SMS",
@@ -147,6 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       "dl.title": "Téléchargez O R B I S dès Aujourd'hui",
       "dl.desc": "Prenez le contrôle absolu de votre vie privée. Installez l'application souveraine sans passer par les magasins centralisés.",
+      "dl.spec_platform_label": "Écosystème",
+      "dl.spec_platform_val": "Android 8.0+ Exclusif",
+      "dl.platform_alert_title": "Plateforme 100% Dédiée à Android — Non disponible sur iPhone (iOS)",
+      "dl.platform_alert_desc": "O R B I S requiert le contrôle matériel du modem GSM et le routage des trames SMS brutes en tâche de fond, des capacités strictement verrouillées et interdites par le système fermé d'Apple (sandbox iOS).",
       "dl.btn_apk": "Télécharger l'APK Officiel",
       "dl.qr_badge": "Scan Rapide",
       "dl.qr_title": "Installation Directe Smartphone",
@@ -164,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "nav.get_app": "Get APK",
 
       "hero.pill": "Decentralized GSM Protocol • 100% Offline",
+      "hero.platform_pill": "Android Exclusive • Incompatible with iPhone / iOS",
+      "hero.platform_note": "Sovereign app strictly designed for Android devices. Fundamentally incompatible with Apple iOS (iPhone).",
       "hero.title_part1": "Communicate Without Internet.",
       "hero.title_part2": "Zero Cloud. Zero Traces.",
       "hero.subtitle": "The world's first sovereign P2P social and encrypted messaging platform powered by GSM SMS network with military-grade AES-256-GCM, Double Ratchet (PFS), and invisible steganography.",
@@ -269,6 +279,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "topics.t6_content": "Steganography conceals encrypted payloads into zero-width invisible Unicode characters inside innocuous sentences, looking like normal SMS to carriers.",
       "topics.t7_title": "What is the actual GSM SMS quota consumption?",
       "topics.t7_content": "Standard text, reactions, GPS shares, or status updates take only 1 single SMS. Zero background keep-alive messages. On unlimited SMS plans, impact is completely zero.",
+      "topics.t8_title": "Is O R B I S available on iPhone (Apple iOS)?",
+      "topics.t8_content": "No, O R B I S is strictly exclusive to Android and will never be available on iPhone. Apple's closed iOS sandbox explicitly prohibits third-party apps from acting as the default SMS telephony client, intercepting raw GSM SMS frames in the background, or directly controlling cellular modem hardware. Only Android's open architecture enables true, decentralized off-grid digital sovereignty.",
 
       "quota.tag": "GSM TRANSPARENCY",
       "quota.title": "SMS Quota Consumption & Efficiency",
@@ -291,6 +303,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       "dl.title": "Download O R B I S Today",
       "dl.desc": "Take absolute control over your digital privacy. Install the sovereign app directly without centralized stores.",
+      "dl.spec_platform_label": "Ecosystem",
+      "dl.spec_platform_val": "Android 8.0+ Exclusive",
+      "dl.platform_alert_title": "100% Android-Exclusive Platform — Not Available on iPhone (iOS)",
+      "dl.platform_alert_desc": "O R B I S requires hardware-level GSM modem access and raw background SMS packet routing, capabilities strictly blocked by Apple's closed iOS sandbox policy.",
       "dl.btn_apk": "Download Official APK",
       "dl.qr_badge": "Quick Scan",
       "dl.qr_title": "Direct Mobile Install",
@@ -308,6 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "nav.get_app": "تحميل APK",
 
       "hero.pill": "بروتوكول لامركزي GSM • يعمل 100% بدون إنترنت",
+      "hero.platform_pill": "حصري لنظام أندرويد • غير متوافق مع آيفون (iOS)",
+      "hero.platform_note": "تطبيق سيادي مخصص حصرياً لهواتف أندرويد. غير متوافق نهائياً مع أجهزة آبل آيفون (iOS).",
       "hero.title_part1": "تواصل بلا إنترنت.",
       "hero.title_part2": "بلا خوادم. بلا أثر.",
       "hero.subtitle": "أول منصة تواصل اجتماعي ومراسلة سيادية من نظير إلى نظير (P2P) في العالم تعمل عبر شبكة الرسائل القصيرة SMS مع تشفير عسكري AES-256-GCM وبروتوكول Double Ratchet وإخفاء البيانات غير المرئي.",
@@ -413,6 +431,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "topics.t6_content": "تقوم التقنية بإخفاء الحزمة المشفرة داخل جملة عادية جداً كأحرف غير مرئية. تبدو الرسالة لشركات الاتصالات أو المراقبين كحديث يومي عادي.",
       "topics.t7_title": "كم يستهلك التطبيق من رصيد الرسائل القصيرة؟",
       "topics.t7_content": "الرسائل النصية، التفاعلات، مشاركة الموقع وتحديثات الحالة تستهلك رسالة SMS واحدة فقط. لا توجد أي رسائل خفية في الخلفية. مع الباقات غير المحدودة يكون التأثير معدوماً تماماً.",
+      "topics.t8_title": "هل يتوفر تطبيق O R B I S على هواتف آيفون (Apple iOS)؟",
+      "topics.t8_content": "كلا، تطبيق O R B I S حصري تماماً لنظام أندرويد ولن يتوفر أبداً على هواتف آيفون. يمنع نظام آبل المغلق (iOS Sandbox) بشكل قاطع أي تطبيق خارجي من أن يكون المعالج الافتراضي للرسائل القصيرة، أو التقاط رسائل GSM بالخلفية، أو التحكم بمودم الاتصال. بنية أندرويد المفتوحة هي الوحيدة التي تتيح سيادة رقمية حقيقية وتواصلاً مشفراً بدون إنترنت.",
 
       "quota.tag": "الشفافية في استهلاك الشبكة",
       "quota.title": "استهلاك باقة الرسائل القصيرة",
@@ -435,6 +455,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       "dl.title": "حمّل تطبيق O R B I S الآن",
       "dl.desc": "امتلك سيادتك الرقمية وخصوصيتك المطلقة. ثبت التطبيق مباشرة دون الاعتماد على المتاجر المركزية.",
+      "dl.spec_platform_label": "البيئة البرمجية",
+      "dl.spec_platform_val": "أندرويد 8.0+ حصرياً",
+      "dl.platform_alert_title": "منصة حصرية بنسبة 100% لنظام أندرويد — غير متوفرة على آيفون (iOS)",
+      "dl.platform_alert_desc": "يتطلب O R B I S وصولاً عتادياً لمودم GSM وتوجيهاً مباشراً لحزم SMS بالخلفية، وهي قدرات محظورة تماماً ومقفلة ضمن نظام آبل المغلق (iOS Sandbox).",
       "dl.btn_apk": "تحميل ملف APK الرسمي",
       "dl.qr_badge": "مسح سريع",
       "dl.qr_title": "تثبيت مباشر على الهاتف",

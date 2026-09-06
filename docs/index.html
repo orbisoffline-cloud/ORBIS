@@ -110,9 +110,15 @@
   <!-- Hero Section -->
   <section class="hero-section container">
     <div class="hero-content">
-      <div class="hero-pill">
-        <span class="pulse-dot"></span>
-        <span data-i18n="hero.pill">Protocole Décentralisé GSM • 100% Hors-Ligne</span>
+      <div class="hero-badges-wrapper">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero.pill">Protocole Décentralisé GSM • 100% Hors-Ligne</span>
+        </div>
+        <div class="hero-platform-pill">
+          <span class="platform-icon">🤖</span>
+          <span data-i18n="hero.platform_pill">Exclusivité Android • Incompatible iPhone / iOS</span>
+        </div>
       </div>
 
       <h1 class="hero-title">
@@ -137,6 +143,11 @@
           <span class="btn-icon">📖</span>
           <span data-i18n="hero.guide_btn">Explorer le Guide & FAQ</span>
         </a>
+      </div>
+
+      <div class="hero-platform-note">
+        <span class="note-icon">ℹ️</span>
+        <span data-i18n="hero.platform_note">Application souveraine exclusivement réservée aux smartphones Android. Incompatible avec Apple iOS (iPhone).</span>
       </div>
 
       <!-- Trust Badges -->
@@ -606,6 +617,20 @@
           </p>
         </div>
       </div>
+
+      <!-- Topic 12 (Apple iOS / iPhone Incompatibility) -->
+      <div class="accordion-item" data-category="sys">
+        <button class="accordion-header">
+          <span class="acc-icon">🍏</span>
+          <span class="acc-title" data-i18n="topics.t8_title">L'application O R B I S est-elle disponible sur iPhone (Apple iOS) ?</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t8_content">
+            Non, O R B I S est une <strong>exclusivité stricte Android</strong> et ne sera jamais disponible sur iPhone. Le système d'exploitation fermé d'Apple (sandbox iOS) interdit formellement à toute application tierce de remplacer le client SMS de téléphonie par défaut, d'intercepter les trames GSM en arrière-plan ou d'accéder directement au modem cellulaire. Seul l'écosystème ouvert d'Android permet d'offrir une véritable souveraineté de communication 100% décentralisée et hors-ligne.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -674,6 +699,10 @@
       </p>
 
       <div class="release-specs">
+        <div class="spec-item spec-item-highlight">
+          <span class="spec-label" data-i18n="dl.spec_platform_label">Écosystème</span>
+          <span class="spec-val" data-i18n="dl.spec_platform_val">Android 8.0+ Exclusif</span>
+        </div>
         <div class="spec-item">
           <span class="spec-label">Version</span>
           <span class="spec-val">v1.1.0 (Stable)</span>
@@ -686,9 +715,19 @@
           <span class="spec-label">Taille</span>
           <span class="spec-val">4.64 Mo</span>
         </div>
-        <div class="spec-item">
-          <span class="spec-label">Compatibilité</span>
-          <span class="spec-val">Android 8.0+ (API 26+)</span>
+      </div>
+
+      <!-- Prominent iOS Incompatibility Notice Banner -->
+      <div class="platform-alert-banner">
+        <div class="platform-alert-icon">
+          <span>🚫</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-.99 1.72-.88 2.76 1.01.08 1.99-.51 2.61-1.26z"/>
+          </svg>
+        </div>
+        <div class="platform-alert-content">
+          <strong data-i18n="dl.platform_alert_title">Plateforme 100% Dédiée à Android — Non disponible sur iPhone (iOS)</strong>
+          <p data-i18n="dl.platform_alert_desc">O R B I S requiert le contrôle matériel du modem GSM et le routage des trames SMS brutes en tâche de fond, des capacités strictement verrouillées et interdites par le système fermé d'Apple (sandbox iOS).</p>
         </div>
       </div>
 
