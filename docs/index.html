@@ -7,8 +7,26 @@
   <meta name="description" content="Communiquez sans Internet, sans serveur et sans traces. ORBIS est la première plateforme sociale et de messagerie P2P souveraine au monde propulsée par le protocole GSM SMS chiffré.">
   <meta name="keywords" content="Orbis, P2P, SMS, chiffrement, AES-256, Double Ratchet, hors-ligne, ShaDevPro, souveraineté, messagerie sécurisée">
   
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  <!-- Favicon & Web App Icons -->
+  <link rel="icon" type="image/png" href="ic_webicon.png">
+  <link rel="shortcut icon" type="image/png" href="ic_webicon.png">
+  <link rel="apple-touch-icon" href="ic_webicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0284c7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ORBIS">
+  
+  <!-- Open Graph & Meta Media -->
+  <meta property="og:title" content="ORBIS — Messagerie & Réseau Social P2P Souverain Hors-Ligne">
+  <meta property="og:description" content="Communiquez sans Internet, sans serveur et sans traces. ORBIS est la première plateforme sociale et de messagerie P2P souveraine au monde propulsée par le protocole GSM SMS chiffré.">
+  <meta property="og:image" content="https://orbisoffline-cloud.github.io/ORBIS/ic_webicon.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ORBIS — Messagerie & Réseau Social P2P Souverain">
+  <meta name="twitter:description" content="Communiquez sans Internet, sans serveur et sans traces.">
+  <meta name="twitter:image" content="https://orbisoffline-cloud.github.io/ORBIS/ic_webicon.png">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +47,7 @@
     <nav class="navbar container">
       <a href="#" class="brand-logo">
         <div class="logo-shield">
-          <span class="logo-icon">🛡️</span>
+          <img src="ic_webicon.png" alt="ORBIS Logo" class="brand-logo-img">
           <div class="orbit-ring"></div>
         </div>
         <div class="brand-text">
@@ -678,11 +696,7 @@
             <!-- Primary APK Button -->
             <a href="https://github.com/orbisoffline-cloud/ORBIS/releases/download/ORBIS-v1.1.0/O.R.B.I.S.apk" id="directDownloadBtn" class="btn-download-primary pulse-hover" download>
               <div class="btn-download-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
+                <img src="ic_webicon.png" alt="ORBIS APK" class="btn-download-app-icon">
               </div>
               <div class="btn-download-text">
                 <span class="btn-download-title" data-i18n="dl.btn_apk">Télécharger l'APK Officiel</span>
@@ -754,8 +768,13 @@
     <div class="container footer-content">
       <div class="footer-brand">
         <div class="brand-logo">
-          <span class="logo-icon">🛡️</span>
-          <span class="brand-title">ORBIS</span>
+          <div class="logo-shield">
+            <img src="ic_webicon.png" alt="ORBIS" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">ORBIS</span>
+            <span class="brand-badge">SOVEREIGN P2P</span>
+          </div>
         </div>
         <p class="footer-tagline" data-i18n="footer.tagline">
           Architecture de communication souveraine, P2P et hors-ligne propulsée par ShaDevPro.

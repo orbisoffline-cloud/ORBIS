@@ -341,6 +341,23 @@ button, input {
   font-size: 1.3rem;
 }
 
+.brand-logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 7px;
+  display: block;
+  z-index: 2;
+}
+
+.btn-download-app-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
 .orbit-ring {
   position: absolute;
   inset: -3px;
@@ -1716,6 +1733,16 @@ button, input {
 
   .logo-icon {
     font-size: 1.1rem;
+  }
+
+  .brand-logo-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btn-download-app-icon {
+    width: 24px;
+    height: 24px;
   }
 
   .brand-title {

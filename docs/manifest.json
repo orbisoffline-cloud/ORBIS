@@ -1,0 +1,17 @@
+{
+  "name": "ORBIS Sovereign P2P",
+  "short_name": "ORBIS",
+  "description": "Messagerie & Réseau Social P2P Souverain Hors-Ligne",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "ic_webicon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
