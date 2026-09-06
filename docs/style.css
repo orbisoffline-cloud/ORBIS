@@ -2396,17 +2396,22 @@ button, input {
 .legal-modal-backdrop {
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   z-index: 1200;
-  background: rgba(3, 7, 18, 0.78);
+  background: rgba(3, 7, 18, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow: hidden;
+  box-sizing: border-box;
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
 }
 
@@ -2417,34 +2422,38 @@ button, input {
 }
 
 .legal-modal-container {
-  width: 100%;
-  max-width: 620px;
-  max-height: 88vh;
-  max-height: 88dvh;
+  width: calc(100vw - 28px);
+  max-width: 580px;
+  height: min(720px, 86vh, 86dvh);
+  max-height: calc(100vh - 28px);
+  max-height: calc(100dvh - 28px);
   margin: auto;
   display: flex;
   flex-direction: column;
-  transform: scale(0.95) translateY(16px);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 0;
   min-height: 0;
+  box-sizing: border-box;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .legal-modal-backdrop.open .legal-modal-container {
-  transform: scale(1) translateY(0);
+  transform: scale(1);
 }
 
 .legal-modal-card {
   width: 100%;
+  height: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 22px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 35px var(--border-glow);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 35px var(--border-glow);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 88vh;
-  max-height: 88dvh;
+  min-width: 0;
   min-height: 0;
+  box-sizing: border-box;
 }
 
 [data-theme="light"] .legal-modal-card {
@@ -2457,23 +2466,26 @@ button, input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px 14px 20px;
+  padding: 14px 18px 12px 18px;
   border-bottom: 1px solid var(--border-color);
   flex-shrink: 0;
-  gap: 12px;
+  gap: 10px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .legal-modal-header-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 .legal-modal-icon-shield {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
   background: rgba(6, 182, 212, 0.12);
   border: 1px solid rgba(6, 182, 212, 0.25);
   color: var(--primary);
@@ -2483,22 +2495,28 @@ button, input {
   flex-shrink: 0;
 }
 
+.legal-modal-icon-shield svg {
+  width: 18px;
+  height: 18px;
+}
+
 .legal-modal-title {
-  font-size: clamp(0.96rem, 3.5vw, 1.15rem);
+  font-size: clamp(0.92rem, 3.5vw, 1.12rem);
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.25;
   word-break: break-word;
+  min-width: 0;
 }
 
 .legal-modal-badge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--accent-green);
   letter-spacing: 0.3px;
   margin-top: 2px;
-  white-space: nowrap;
+  word-break: break-word;
 }
 
 [data-theme="light"] .legal-modal-badge {
@@ -2506,13 +2524,13 @@ button, input {
 }
 
 .legal-modal-close-btn {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2530,35 +2548,36 @@ button, input {
 .legal-tab-switcher {
   display: flex;
   gap: 6px;
-  padding: 5px;
-  margin: 12px 20px 4px 20px;
+  padding: 4px;
+  margin: 10px 16px 4px 16px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   border: 1px solid var(--border-color);
   flex-shrink: 0;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 [data-theme="light"] .legal-tab-switcher {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .legal-tab-btn {
   flex: 1 1 0;
   min-width: 0;
-  padding: 8px 10px;
+  padding: 8px 6px;
   border-radius: 8px;
   border: none;
   background: transparent;
   color: var(--text-muted);
   font-family: inherit;
-  font-size: clamp(0.76rem, 2.8vw, 0.88rem);
-  font-weight: 600;
+  font-size: clamp(0.74rem, 2.8vw, 0.86rem);
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 1.25;
 }
 
 .legal-tab-btn.active {
@@ -2568,18 +2587,23 @@ button, input {
 }
 
 .legal-modal-body {
-  padding: 12px 20px;
+  padding: 10px 16px;
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .legal-tab-pane {
   display: none;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
+  width: 100%;
 }
 
 .legal-tab-pane.active {
@@ -2593,11 +2617,14 @@ button, input {
 }
 
 .legal-item-card {
-  padding: 13px 15px;
-  border-radius: 14px;
+  padding: 12px 14px;
+  border-radius: 13px;
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--border-color);
   transition: border-color 0.2s ease, background 0.2s ease;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 [data-theme="light"] .legal-item-card {
@@ -2615,6 +2642,7 @@ button, input {
   align-items: center;
   gap: 8px;
   margin-bottom: 5px;
+  min-width: 0;
 }
 
 .legal-item-icon {
@@ -2624,22 +2652,40 @@ button, input {
 }
 
 .legal-item-head h4 {
-  font-size: 0.91rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.3;
+  word-break: break-word;
+  min-width: 0;
 }
 
 .legal-item-card p {
-  font-size: 0.83rem;
-  line-height: 1.52;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--text-muted);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .legal-modal-footer {
-  padding: 12px 20px 16px 20px;
+  padding: 12px 16px 16px 16px;
   border-top: 1px solid var(--border-color);
   flex-shrink: 0;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.legal-modal-footer .btn {
+  width: 100%;
+  min-height: 42px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn-block {
@@ -2656,164 +2702,60 @@ button, input {
   }
 }
 
-@media (max-width: 640px) {
-  .legal-modal-backdrop {
-    padding: 12px;
-    align-items: center;
-    justify-content: center;
-  }
-
+@media (max-width: 480px) {
   .legal-modal-container {
-    max-width: 100%;
-    max-height: 90vh;
-    max-height: 90dvh;
-    transform: scale(0.95);
-  }
-
-  .legal-modal-backdrop.open .legal-modal-container {
-    transform: scale(1);
-  }
-
-  .legal-modal-card {
-    border-radius: 18px;
-    max-height: 90vh;
-    max-height: 90dvh;
+    width: calc(100vw - 20px);
+    height: min(680px, 88vh, 88dvh);
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
   }
 
   .legal-modal-header {
-    padding: 12px 14px 10px 14px;
-    gap: 8px;
-  }
-
-  .legal-modal-icon-shield {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
-  }
-
-  .legal-modal-icon-shield svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .legal-modal-title {
-    font-size: 0.94rem;
-  }
-
-  .legal-modal-badge {
-    font-size: 0.65rem;
-  }
-
-  .legal-modal-close-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 0.85rem;
+    padding: 12px 12px 10px 12px;
   }
 
   .legal-tab-switcher {
-    margin: 8px 12px 3px 12px;
-    padding: 3px;
-    gap: 3px;
-  }
-
-  .legal-tab-btn {
-    padding: 7px 4px;
-    font-size: clamp(0.72rem, 3.2vw, 0.82rem);
+    margin: 8px 12px 4px 12px;
   }
 
   .legal-modal-body {
-    padding: 10px 12px;
-    min-height: 0;
-    flex: 1 1 auto;
+    padding: 8px 12px;
   }
 
   .legal-item-card {
     padding: 10px 12px;
-    border-radius: 11px;
-  }
-
-  .legal-item-head {
-    gap: 6px;
-    margin-bottom: 3px;
-  }
-
-  .legal-item-icon {
-    font-size: 0.95rem;
-  }
-
-  .legal-item-head h4 {
-    font-size: 0.84rem;
-  }
-
-  .legal-item-card p {
-    font-size: 0.78rem;
-    line-height: 1.45;
   }
 
   .legal-modal-footer {
-    padding: 10px 12px 12px 12px;
-  }
-
-  .legal-modal-footer .btn {
-    min-height: 40px;
-    font-size: 0.86rem;
+    padding: 10px 12px 14px 12px;
   }
 }
 
-@media (max-width: 380px) {
-  .legal-modal-backdrop {
-    padding: 8px;
+@media (max-width: 360px) {
+  .legal-modal-container {
+    width: calc(100vw - 12px);
+    height: min(680px, 92vh, 92dvh);
   }
 
   .legal-modal-header {
-    padding: 10px 10px 8px 10px;
-  }
-
-  .legal-modal-header-info {
-    gap: 6px;
-  }
-
-  .legal-modal-icon-shield {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
+    padding: 10px;
   }
 
   .legal-modal-title {
-    font-size: 0.86rem;
-  }
-
-  .legal-modal-badge {
-    font-size: 0.6rem;
-  }
-
-  .legal-tab-switcher {
-    margin: 6px 8px 2px 8px;
+    font-size: 0.88rem;
   }
 
   .legal-tab-btn {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     padding: 6px 2px;
   }
 
   .legal-modal-body {
-    padding: 8px 8px;
+    padding: 6px 8px;
   }
 
   .legal-item-card {
-    padding: 8px 9px;
-  }
-
-  .legal-item-head h4 {
-    font-size: 0.8rem;
-  }
-
-  .legal-item-card p {
-    font-size: 0.74rem;
-  }
-
-  .legal-modal-footer {
-    padding: 8px 8px 10px 8px;
+    padding: 8px 10px;
   }
 }
 
