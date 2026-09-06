@@ -625,6 +625,26 @@
           </p>
         </div>
       </div>
+
+      <!-- Topic 13 (Legal, Privacy & Terms of Service) -->
+      <div class="accordion-item" data-category="sec">
+        <button class="accordion-header">
+          <span class="acc-icon">📜</span>
+          <span class="acc-title" data-i18n="topics.t_legal_title">Politique de Confidentialité & Conditions d'Utilisation</span>
+          <span class="acc-chevron">▼</span>
+        </button>
+        <div class="accordion-body">
+          <p data-i18n="topics.t_legal_content">
+            ORBIS est une infrastructure souveraine 100% hors-ligne. Aucune donnée n'est collectée ou transmise à des serveurs tiers. Les communications sont chiffrées de bout en bout (AES-256-GCM / RSA-2048 / Double Ratchet). En tant que logiciel propriétaire fourni « en l'état », chaque utilisateur est légalement et exclusivement responsable de son utilisation et de la conformité avec les lois de sa juridiction.
+          </p>
+          <div style="margin-top: 14px;">
+            <button type="button" class="btn btn-secondary btn-sm open-legal-modal" data-tab="0">
+              <span class="btn-icon">📋</span>
+              <span data-i18n="legal.open_modal_btn">Consulter les Conditions & Confidentialité</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -811,6 +831,8 @@
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="#security" data-i18n="nav.security">Sécurité</a>
         <a href="#help-center" data-i18n="nav.help">Guide</a>
+        <button type="button" class="footer-link-btn open-legal-modal" data-tab="0" data-i18n="footer.privacy">Confidentialité</button>
+        <button type="button" class="footer-link-btn open-legal-modal" data-tab="1" data-i18n="footer.terms">Conditions & Légal</button>
         <a href="https://t.me/orbis_community" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
@@ -832,6 +854,115 @@
       <path d="M18 15l-6-6-6 6"/>
     </svg>
   </button>
+
+  <!-- =========================================================================
+       Modal: Confidentialité & Conditions (Audit Android APK PrivacyTermsDialog)
+       ========================================================================= -->
+  <div id="legalModal" class="legal-modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="legalModalTitle">
+    <div class="legal-modal-container">
+      <div class="legal-modal-card">
+        <!-- Header -->
+        <div class="legal-modal-header">
+          <div class="legal-modal-header-info">
+            <div class="legal-modal-icon-shield" id="legalHeaderIcon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 id="legalModalTitle" class="legal-modal-title" data-i18n="legal.modal_title">Confidentialité & Conditions</h3>
+              <span class="legal-modal-badge" data-i18n="legal.badge">100% Hors-Ligne • Souverain</span>
+            </div>
+          </div>
+          <button type="button" id="closeLegalModalBtn" class="legal-modal-close-btn" aria-label="Fermer">✕</button>
+        </div>
+
+        <!-- Segmented Tab Switcher -->
+        <div class="legal-tab-switcher">
+          <button type="button" class="legal-tab-btn active" data-tab-target="0" data-i18n="legal.tab_privacy">Confidentialité</button>
+          <button type="button" class="legal-tab-btn" data-tab-target="1" data-i18n="legal.tab_terms">Conditions & Légal</button>
+        </div>
+
+        <!-- Tab Body Content -->
+        <div class="legal-modal-body" id="legalModalBody">
+          <!-- Tab 0: Privacy Policy -->
+          <div class="legal-tab-pane active" id="legalTabPrivacy">
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">📋</span>
+                <h4 data-i18n="legal.p1_title">1. Zéro Collecte & Zéro Serveur</h4>
+              </div>
+              <p data-i18n="legal.p1_desc">ORBIS ne dispose d'aucun serveur, base de données centrale ou service d'analyse. Aucune donnée d'utilisation, adresse IP, identifiant ou contact n'est jamais collecté, transmis ou revendu.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">🔐</span>
+                <h4 data-i18n="legal.p2_title">2. Chiffrement de Bout en Bout Matériel</h4>
+              </div>
+              <p data-i18n="legal.p2_desc">Toutes les communications (messages, notes vocales, publications, sondages) sont chiffrées sur votre appareil avec AES-256-GCM, Double Ratchet (PFS) et RSA-2048 adossés à l'Android KeyStore matériel.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">🗄️</span>
+                <h4 data-i18n="legal.p3_title">3. Stockage Exclusivement Local</h4>
+              </div>
+              <p data-i18n="legal.p3_desc">L'historique de vos discussions, clés privées et publications est conservé localement dans le stockage protégé de l'application. Vous pouvez exporter une archive chiffrée (PBKDF2) ou tout effacer à tout instant.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">📡</span>
+                <h4 data-i18n="legal.p4_title">4. Métadonnées Cellulaires GSM</h4>
+              </div>
+              <p data-i18n="legal.p4_desc">Les paquets chiffrés transitent par le réseau SMS de votre opérateur téléphonique. Bien que le contenu soit illisible sans vos clés, votre opérateur conserve les métadonnées de transmission habituelles (numéros, horodatage, antennes-relais) conformément à la réglementation télécoms locale.</p>
+            </div>
+          </div>
+
+          <!-- Tab 1: Terms of Use & Legal Disclaimer -->
+          <div class="legal-tab-pane" id="legalTabTerms">
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">📜</span>
+                <h4 data-i18n="legal.t1_title">1. Licence d'Utilisation & Fourniture « En l'état »</h4>
+              </div>
+              <p data-i18n="legal.t1_desc">ORBIS est un logiciel souverain et propriétaire concédé sous licence d'utilisation personnelle, distribué SANS AUCUNE GARANTIE, expresse ou implicite, y compris les garanties d'adéquation à un usage particulier, d'absence d'erreurs ou de disponibilité continue.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">⚖️</span>
+                <h4 data-i18n="legal.t2_title">2. Responsabilité Exclusive de l'Utilisateur</h4>
+              </div>
+              <p data-i18n="legal.t2_desc">Vous reconnaissez être seul responsable de l'utilisation que vous faites de l'application et de vos communications. Vous vous engagez à respecter l'ensemble des lois, réglementations et restrictions en vigueur dans votre juridiction.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">🛡️</span>
+                <h4 data-i18n="legal.t3_title">3. Décharge de Responsabilité des Développeurs</h4>
+              </div>
+              <p data-i18n="legal.t3_desc">Les créateurs, développeurs et contributeurs d'ORBIS déclinent expressément toute responsabilité civile ou pénale quant aux dommages, litiges ou infractions découlant d'une utilisation illicite, frauduleuse ou détournée de l'application.</p>
+            </div>
+
+            <div class="legal-item-card">
+              <div class="legal-item-head">
+                <span class="legal-item-icon">🚨</span>
+                <h4 data-i18n="legal.t4_title">4. Fonctionnalités d'Urgence (SOS / GPS)</h4>
+              </div>
+              <p data-i18n="legal.t4_desc">Les fonctions de partage de position GPS et d'alerte SOS sont des outils d'assistance de pair à pair basés sur le signal radio GSM local et ne se substituent en aucun cas aux services publics d'urgence officiels.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action -->
+        <div class="legal-modal-footer">
+          <button type="button" id="acceptLegalModalBtn" class="btn btn-primary btn-block" data-i18n="legal.btn_close">Compris & Accepter</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

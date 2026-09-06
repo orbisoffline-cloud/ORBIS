@@ -154,6 +154,33 @@ document.addEventListener('DOMContentLoaded', () => {
       "dl.qr_title": "Installation Directe Smartphone",
       "dl.qr_desc": "Scannez ce QR Code avec l'appareil photo de votre smartphone Android pour lancer le téléchargement immédiat.",
 
+      "legal.modal_title": "Confidentialité & Conditions",
+      "legal.badge": "100% Hors-Ligne • Souverain",
+      "legal.tab_privacy": "Confidentialité",
+      "legal.tab_terms": "Conditions & Légal",
+      "legal.p1_title": "1. Zéro Collecte & Zéro Serveur",
+      "legal.p1_desc": "ORBIS ne dispose d'aucun serveur, base de données centrale ou service d'analyse. Aucune donnée d'utilisation, adresse IP, identifiant ou contact n'est jamais collecté, transmis ou revendu.",
+      "legal.p2_title": "2. Chiffrement de Bout en Bout Matériel",
+      "legal.p2_desc": "Toutes les communications (messages, notes vocales, publications, sondages) sont chiffrées sur votre appareil avec AES-256-GCM, Double Ratchet (PFS) et RSA-2048 adossés à l'Android KeyStore matériel.",
+      "legal.p3_title": "3. Stockage Exclusivement Local",
+      "legal.p3_desc": "L'historique de vos discussions, clés privées et publications est conservé localement dans le stockage protégé de l'application. Vous pouvez exporter une archive chiffrée (PBKDF2) ou tout effacer à tout instant.",
+      "legal.p4_title": "4. Métadonnées Cellulaires GSM",
+      "legal.p4_desc": "Les paquets chiffrés transitent par le réseau SMS de votre opérateur téléphonique. Bien que le contenu soit illisible sans vos clés, votre opérateur conserve les métadonnées de transmission habituelles (numéros, horodatage, antennes-relais) conformément à la réglementation télécoms locale.",
+      "legal.t1_title": "1. Licence d'Utilisation & Fourniture « En l'état »",
+      "legal.t1_desc": "ORBIS est un logiciel souverain et propriétaire concédé sous licence d'utilisation personnelle, distribué SANS AUCUNE GARANTIE, expresse ou implicite, y compris les garanties d'adéquation à un usage particulier, d'absence d'erreurs ou de disponibilité continue.",
+      "legal.t2_title": "2. Responsabilité Exclusive de l'Utilisateur",
+      "legal.t2_desc": "Vous reconnaissez être seul responsable de l'utilisation que vous faites de l'application et de vos communications. Vous vous engagez à respecter l'ensemble des lois, réglementations et restrictions en vigueur dans votre juridiction.",
+      "legal.t3_title": "3. Décharge de Responsabilité des Développeurs",
+      "legal.t3_desc": "Les créateurs, développeurs et contributeurs d'ORBIS déclinent expressément toute responsabilité civile ou pénale quant aux dommages, litiges ou infractions découlant d'une utilisation illicite, frauduleuse ou détournée de l'application.",
+      "legal.t4_title": "4. Fonctionnalités d'Urgence (SOS / GPS)",
+      "legal.t4_desc": "Les fonctions de partage de position GPS et d'alerte SOS sont des outils d'assistance de pair à pair basés sur le signal radio GSM local et ne se substituent en aucun cas aux services publics d'urgence officiels.",
+      "legal.btn_close": "Compris & Accepter",
+      "legal.open_modal_btn": "Consulter les Conditions & Confidentialité",
+      "topics.t_legal_title": "Politique de Confidentialité & Conditions d'Utilisation",
+      "topics.t_legal_content": "ORBIS est une infrastructure souveraine 100% hors-ligne. Aucune donnée n'est collectée ou transmise à des serveurs tiers. Les communications sont chiffrées de bout en bout (AES-256-GCM / RSA-2048 / Double Ratchet). En tant que logiciel propriétaire fourni « en l'état », chaque utilisateur est légalement et exclusivement responsable de son utilisation et de la conformité avec les lois de sa juridiction.",
+
+      "footer.privacy": "Confidentialité",
+      "footer.terms": "Conditions & Légal",
       "footer.tagline": "Architecture de communication souveraine, P2P et hors-ligne propulsée par ShaDevPro."
     },
 
@@ -300,6 +327,33 @@ document.addEventListener('DOMContentLoaded', () => {
       "dl.qr_title": "Direct Mobile Install",
       "dl.qr_desc": "Scan this QR Code with your Android camera to start instant download.",
 
+      "legal.modal_title": "Privacy & Terms of Service",
+      "legal.badge": "100% Offline • Sovereign",
+      "legal.tab_privacy": "Privacy Policy",
+      "legal.tab_terms": "Terms of Use",
+      "legal.p1_title": "1. Zero Data Collection & Zero Cloud",
+      "legal.p1_desc": "ORBIS has no central servers, analytics or databases. No personal data, IP addresses, identifiers, or contacts are ever collected, transmitted, or sold.",
+      "legal.p2_title": "2. Hardware-Backed End-to-End Encryption",
+      "legal.p2_desc": "All communications (messages, voice notes, posts, polls) are encrypted on-device with AES-256-GCM, Double Ratchet (PFS), and RSA-2048 backed by Android KeyStore hardware.",
+      "legal.p3_title": "3. Exclusively On-Device Storage",
+      "legal.p3_desc": "Your chat history, private keys, and posts are stored locally in the app's secure vault. You can export a PBKDF2-encrypted backup or wipe everything at any time.",
+      "legal.p4_title": "4. Cellular GSM Transport Metadata",
+      "legal.p4_desc": "Encrypted packets are transmitted via your mobile carrier's SMS network. While message content is cryptographically sealed, your mobile operator logs standard routing metadata (phone numbers, timestamps, cell towers) according to local telecom regulations.",
+      "legal.t1_title": "1. End-User License & 'As-Is' Provision",
+      "legal.t1_desc": "ORBIS is sovereign and proprietary software provided under a personal use license, distributed WITHOUT ANY WARRANTY, express or implied, including merchantability, fitness for a particular purpose, or error-free operation.",
+      "legal.t2_title": "2. User Legal Responsibility & Compliance",
+      "legal.t2_desc": "You acknowledge that you are solely responsible for your use of the application and all transmissions. You agree to comply with all applicable laws, regulations, and restrictions in your jurisdiction.",
+      "legal.t3_title": "3. Developer Limitation of Liability",
+      "legal.t3_desc": "The creators, developers, and contributors of ORBIS expressly disclaim any liability for any damages, losses, claims, or unlawful activities resulting from the misuse or deployment of this software.",
+      "legal.t4_title": "4. Emergency Features (SOS / GPS)",
+      "legal.t4_desc": "GPS location sharing and SOS alert features are peer-to-peer assistance tools based on local GSM radio coverage and do not replace official public emergency services.",
+      "legal.btn_close": "Understood & Accept",
+      "legal.open_modal_btn": "View Terms & Privacy Policy",
+      "topics.t_legal_title": "Privacy Policy & Terms of Service",
+      "topics.t_legal_content": "ORBIS is a 100% offline sovereign infrastructure. No personal data is collected or sent to third-party servers. All communications are end-to-end encrypted (AES-256-GCM / RSA-2048 / Double Ratchet). As proprietary software provided 'as is', each user remains solely and legally responsible for their usage and compliance with local laws.",
+
+      "footer.privacy": "Privacy Policy",
+      "footer.terms": "Terms of Use",
       "footer.tagline": "Sovereign, P2P, and offline communication architecture powered by ShaDevPro."
     },
 
@@ -446,6 +500,33 @@ document.addEventListener('DOMContentLoaded', () => {
       "dl.qr_title": "تثبيت مباشر على الهاتف",
       "dl.qr_desc": "امسح رمز الاستجابة السريعة بكاميرا هاتفك لبدء التحميل الفوري.",
 
+      "legal.modal_title": "الخصوصية والشروط القانونية",
+      "legal.badge": "100% بدون إنترنت • سيادي ومشفر",
+      "legal.tab_privacy": "الخصوصية",
+      "legal.tab_terms": "الشروط والأحكام",
+      "legal.p1_title": "1. انعدام جمع البيانات والخوادم السحابية",
+      "legal.p1_desc": "لا يملك أوربيس أي خوادم مركزية أو تحليلات. لا يتم جمع أو نقل أو بيع أي بيانات شخصية أو عناوين IP أو جهات اتصال نهائياً.",
+      "legal.p2_title": "2. تشفير شامل طرفاً لطرف معتمد عتادياً",
+      "legal.p2_desc": "جميع المراسلات (رسائل، تسجيلات صوتية، منشورات، استطلاعات) مشفرة على جهازك بتقنيات AES-256-GCM و Double Ratchet و RSA-2048 المحمية عتادياً.",
+      "legal.p3_title": "3. تخزين محلي حصري على الجهاز",
+      "legal.p3_desc": "يتم تخزين سجل المحادثات والمفاتيح الخاصة والمنشورات محلياً في خزانة التطبيق الآمنة. يمكنك تصدير نسخة احتياطية مشفرة بـ PBKDF2 أو مسح كل شيء في أي لحظة.",
+      "legal.p4_title": "4. بيانات الإرسال الوصفية لشبكة GSM",
+      "legal.p4_desc": "تنتقل الحزم المشفرة عبر شبكة SMS الخاصة بمشغل الهاتف. رغم استحالة قراءة المحتوى بدون مفاتيحك، يحتفظ المشغل ببيانات الإرسال الوصفية المعتادة (الأرقام، الوقت، الأبراج) وفقاً للقوانين المحلية.",
+      "legal.t1_title": "1. رخصة الاستخدام وتوفير البرنامج 'كما هو'",
+      "legal.t1_desc": "أوربيس برنامج سيادي وخاص يتم توفيره بموجب رخصة استخدام شخصية 'كما هو' دون أي ضمانات صريحة أو ضمنية بما في ذلك الملاءمة لغرض معين أو الخلو من الأخطاء.",
+      "legal.t2_title": "2. المسؤولية القانونية الحصرية للمستخدم",
+      "legal.t2_desc": "تقر بأنك المسؤول الوحيد عن استخدامك للتطبيق ومراسلاتك، وتتعهد بالامتثال لجميع القوانين واللوائح السارية في بلدك أو نطاقك القضائي.",
+      "legal.t3_title": "3. إخلاء مسؤولية المطورين والمساهمين",
+      "legal.t3_desc": "يخلي مطورو ومساهمو أوربيس مسؤوليتهم المدنية والجنائية تماماً عن أي أضرار أو خسائر أو أنشطة غير قانونية ناتجة عن إساءة استخدام التطبيق.",
+      "legal.t4_title": "4. ميزات الطوارئ (SOS وتحديد الموقع)",
+      "legal.t4_desc": "ميزات مشاركة الموقع وتنبيه SOS هي أدوات مساعدة بين النظراء تعتمد على تغطية GSM المحلية ولا تحل محل خدمات الطوارئ الرسمية.",
+      "legal.btn_close": "فهمت وأوافق",
+      "legal.open_modal_btn": "عرض سياسة الخصوصية والشروط",
+      "topics.t_legal_title": "سياسة الخصوصية والشروط وإخلاء المسؤولية",
+      "topics.t_legal_content": "أوربيس بنية تحتية سيادية تعمل دون إنترنت بنسبة 100%. لا يتم جمع أو إرسال أي بيانات إلى خوادم سحابية. يتم تشفير الاتصالات طرفاً لطرف (AES-256-GCM / RSA-2048 / Double Ratchet). وبما أنه برنامج سيادي وخاص يُقدَّم \"كما هو\"، يتحمل كل مستخدم وحده المسؤولية القانونية الكاملة عن استخداماته والامتثال للقوانين المحلية.",
+
+      "footer.privacy": "الخصوصية",
+      "footer.terms": "الشروط والأحكام",
       "footer.tagline": "بنية اتصالات سيادية ولامركزية بدون إنترنت مطورة بواسطة ShaDevPro."
     }
   };
@@ -727,4 +808,85 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealElements.forEach(el => el.classList.add('is-revealed'));
   }
+
+  // =========================================================================
+  // 8. Legal & Privacy Terms Modal Controller (Audit Android APK)
+  // =========================================================================
+  const legalModal = document.getElementById('legalModal');
+  const closeLegalModalBtn = document.getElementById('closeLegalModalBtn');
+  const acceptLegalModalBtn = document.getElementById('acceptLegalModalBtn');
+  const legalTabBtns = document.querySelectorAll('.legal-tab-btn');
+  const legalTabPrivacy = document.getElementById('legalTabPrivacy');
+  const legalTabTerms = document.getElementById('legalTabTerms');
+
+  function openLegalModal(tabIndex = 0) {
+    if (!legalModal) return;
+    switchLegalTab(tabIndex);
+    legalModal.classList.add('open');
+    legalModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLegalModal() {
+    if (!legalModal) return;
+    legalModal.classList.remove('open');
+    legalModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function switchLegalTab(tabIndex) {
+    const isPrivacy = tabIndex === 0 || tabIndex === '0';
+    legalTabBtns.forEach(btn => {
+      const target = btn.getAttribute('data-tab-target');
+      btn.classList.toggle('active', isPrivacy ? (target === '0') : (target === '1'));
+    });
+    if (legalTabPrivacy) legalTabPrivacy.classList.toggle('active', isPrivacy);
+    if (legalTabTerms) legalTabTerms.classList.toggle('active', !isPrivacy);
+  }
+
+  legalTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-tab-target');
+      switchLegalTab(parseInt(target, 10));
+    });
+  });
+
+  // Open modal triggers anywhere in DOM (footer, topics, etc.)
+  document.querySelectorAll('.open-legal-modal').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = trigger.getAttribute('data-tab') || '0';
+      openLegalModal(parseInt(tab, 10));
+    });
+  });
+
+  closeLegalModalBtn?.addEventListener('click', closeLegalModal);
+  acceptLegalModalBtn?.addEventListener('click', closeLegalModal);
+
+  // Click on background backdrop to close
+  legalModal?.addEventListener('click', (e) => {
+    if (e.target === legalModal || e.target.classList.contains('legal-modal-container')) {
+      closeLegalModal();
+    }
+  });
+
+  // Keyboard accessibility (ESC)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && legalModal?.classList.contains('open')) {
+      closeLegalModal();
+    }
+  });
+
+  // Check URL hash for direct deep-linking (#privacy, #terms, #legal)
+  function checkLegalHash() {
+    const hash = window.location.hash.toLowerCase();
+    if (hash === '#privacy') {
+      openLegalModal(0);
+    } else if (hash === '#terms' || hash === '#legal') {
+      openLegalModal(1);
+    }
+  }
+
+  checkLegalHash();
+  window.addEventListener('hashchange', checkLegalHash);
 });
